@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-23T10:30:34.202Z</updated>
+  <updated>2017-03-06T10:09:06.974Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,120 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>重新安装hexo博客的坑</title>
+    <link href="http://yoursite.com/2017/03/05/%E9%87%8D%E6%96%B0%E5%AE%89%E8%A3%85hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9D%91/"/>
+    <id>http://yoursite.com/2017/03/05/重新安装hexo博客的坑/</id>
+    <published>2017-03-05T08:50:11.000Z</published>
+    <updated>2017-03-06T10:09:06.974Z</updated>
+    
+    <content type="html"><![CDATA[<p>终于搞好了.几天前怪我手贱.想玩玩nodejs的版本管理工具,nvm.然后在我的电脑下(windows7 64位).把原来的node删除,安装了nvm管理node.结果..不知道为什么的,node的npm包安装不了.然后..就没有然后了, 接着连node都用不了了.在google下的很多方法都不能用后,于是我只好重装系统.</p>
+<p>接着 hexo 搭建的博客也更新不了了.. 弄了半天 google了好久,终于搞定了.</p>
+<p>不说多了,怕下次还会重装系统出现这样的问题,导致浪费时间.特此记录一下.</p>
+<p>首先,以前没玩过hexo搭建博客的.可以参考一下下面两个博客,我是按照这两个博客弄的.但是技术日新月异,最好直接参照hexo官网,搭建..</p>
+<p><a href="http://www.cylong.com/blog/2016/04/19/hexo-git/" target="_blank" rel="external">博客一</a></p>
+<p><a href="http://hifor.net/2015/07/01/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-hexo-github/" target="_blank" rel="external">博客二</a></p>
+<p>下面这个才是真正的正文..</p>
+<p>重装系统后,如果还想继续玩hexo搭建的博客.<br>1.首先把原来的没重装系统前的博客的文件夹,直接复制里面的内容到你想要安装的新目录文件夹中.<br>2._config.yml，theme/，source/，scaffolds/，package.json，.gitignore，是需要拷贝的留下来的.<br>3..git/，node_modules/，public/，.deploy_git/，db.json文件需要删除。<br>4.然后,删除好了以后, 用命令npm install 自动安装package.json的文件.<br>5.输入下面这两个命令,获取你的用户名和邮箱(可以以后直接不要每次部署的时候每次都输入自己的名字了!)  </p>
+<pre><code>git config --global user.name &quot;YOUR NAME&quot;
+git config --global user.email &quot;YOUR EMAIL ADDRESS&quot;
+</code></pre><p>其中，YOUR NAME 是自己取的名字，YOUR EMAIL ADDRESS 是自己的 Github 邮箱。</p>
+<p>6.关键的一点是,因为重装系统了,就没有git公钥了,所以要打开git bash<br>输入命令</p>
+<pre><code>$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;  //后面换成你的github邮箱
+</code></pre><p>然后一路按回车,完成后打开c盘.搜索 id_rsa.pub 这个文件,找到后,用随便哪个编辑器打开他.复制里面的内容,<br>接着,我们去github官网登录账号后,<br>登陆GitHub，打开「Settings」-&gt;「SSH and GPG keys」，然后点击「new SSH key」，填上任意Title，在Key文本框里粘贴公钥id_rsa.pub文件的内容（千万不要粘贴成私钥了！），最后点击「Add SSH Key」，你就应该看到已经添加的Key。<br>7.这回也是很重要的一点是:为了能用 hexo d 这个命令部署到github上面,需要安装</p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre><p>这回就大功告成了! 这回,重装系统或者换电脑了,也可以继续使用hexo更新博客了!</p>
+<p>关于安装好hexo后,使用的一些命令:<br>新建md文件:</p>
+<pre><code>hexo new &apos;my-first-blog&apos; #创建一个md文件
+</code></pre><p>启动服务器,查看本地效果</p>
+<pre><code>hexo s //默认开在4000 端口 http://localhost:4000
+</code></pre><p>上传到github的命令组,</p>
+<pre><code>hexo clean  # 清除之前 public 文件夹的内容
+</code></pre><p>生成静态的 public 文件夹，部署时候也是直接拷贝此文件夹里的文件。</p>
+<pre><code>hexo g
+</code></pre><p>部署到 Github 上，按照提示输入自己 Github 的用户名和密码。</p>
+<pre><code>hexo d 
+</code></pre><p>当然上面的 hexo g 和hexo d 命令可以合并成:</p>
+<pre><code>hexo d --g #或者 hexo g --d
+</code></pre><p>主要参考文献:<br><a href="https://www.zhihu.com/question/21193762" target="_blank" rel="external">知乎大神–skycrown 在答案的大概中间位置,android开发</a><br><a href="http://lowrank.science/Hexo-Migration/" target="_blank" rel="external">多机更新 Hexo 博客</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;终于搞好了.几天前怪我手贱.想玩玩nodejs的版本管理工具,nvm.然后在我的电脑下(windows7 64位).把原来的node删除,安装了nvm管理node.结果..不知道为什么的,node的npm包安装不了.然后..就没有然后了, 接着连node都用不了了.在goo
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>开发微信公众号遇见的坑</title>
+    <link href="http://yoursite.com/2017/01/18/%E5%BC%80%E5%8F%91%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91/"/>
+    <id>http://yoursite.com/2017/01/18/开发微信公众号遇见的坑/</id>
+    <published>2017-01-18T14:20:11.000Z</published>
+    <updated>2017-03-06T10:07:48.895Z</updated>
+    
+    <content type="html"><![CDATA[<p>我的天,我的记性实在是太烂了,我以前的弄过的微信公众号都忘记的差不多了,今天想来重新弄一下,结果..</p>
+<p>俗话说:”好记性不如烂笔头..”</p>
+<p>不说了,直接进入正题.</p>
+<p>这次我还是开发订阅号(准备开始弄小程序了,来回忆回忆..)<br>1.肯定申请微信公众号的啦,然后正式的微信公众号在腾讯7个工作日内审批下来.如果实在没有公众号,可以申请一个测试的公众号,用于实验什么的..</p>
+<p>2.开发的时候,在自己的电脑上写的代码,是没办法暴露在外网上的,意思就是这段代码只能在自己的局域网上跑.然后就需要一个内网暴露的软件,什么花生壳什么的都可以,但是我记得我以前用的是ngrok这个软件,这个软件是外国的. 然后我这次用的时候,发现用不了了?! 然后我google了半天,原来是升级了,<a href="https://natapp.cn" target="_blank" rel="external">升级后的网址是这个:natapp.cn</a>,然后下载他的那个新的软件natapp.exe,然后按照<a href="https://natapp.cn/article/natapp_newbie" target="_blank" rel="external">natapp.exe的使用教程</a>来弄就OK了(申请账号的时候,可以用免费的套餐,但是免费的套餐有时候会自动更改那个外网的地址,所以开发的时候要经常去微信的后台去换地址,烦..).成功了.但是在开这个natapp.exe之前先,自己在自己的电脑上开一个端口80的.用什么阿帕奇服务器都行,以前我是用阿帕奇,现在get到了个,用python开web服务器,一行代码搞定..</p>
+<p>现在贴代码..</p>
+<pre><code>python -m SimpleHTTPServer 80  # python2
+py -3 -m http.server 80  # python3
+</code></pre><p>我又发现一个,在nodejs下运行,开端口的..<br>先下载这个包 </p>
+<pre><code>npm install http-server -g //下载这个文件包
+</code></pre><p>然后就可以在站点的目录下输入</p>
+<pre><code>http-server //默认开80端口 和python一样的效果.
+</code></pre><p>更改端口,可以输入</p>
+<pre><code>http-server -p 端口号  //可以更改任意端口,但是不要被占用了.
+</code></pre><p>简单吧..(这是测试natapp有没有在运行.)</p>
+<p>(我发现一个问题,就是用python开端口的时候,就算是在局域网里的另一台机器都访问,如果端口下的文件夹是视频什么的比较大的文件,python会自动断开这个端口.但是是网页什么的,就没问题.用nodejs开端口,可以任意使用.原因暂时不明..)</p>
+<p>然后开完一个web服务器后就可以用natapp.exe,这个natapp的默认端口是80,所以开80端口的才有用(貌似微信的公众号的后台调试也是只支持80端口的..)</p>
+<p>这里有个小插曲,就是关于nodejs的,我这次用的后台是nodejs,然后node有两种版本,因为历史的原因,0.几版本的(公司做的稳定版)还有一个是4.几的(个人做的,以前叫io.js,这个分支的第一个数是偶数的版本,稳定,奇数是测试版本),然后我记得我以前玩node的时候,有些库是不能在其他版本用的,然后我就想到python可以两个版本同时装在一台电脑上,node应该也是可以的吧.所以我就又跳进坑了,琢磨了好久,发现有个有个叫nvm的东西,可以管理node版本(厉害!).然后我就想玩了一下,<a href="http://dajyaretakuya.blog.51cto.com/2823475/1760255/" target="_blank" rel="external">贴上一个大神的博客</a>,我想说:那个windows版的nvm好难下载,速度好慢,下载失败了好多次.. 但是最后还是被我弄下来了..<br>这篇博文是关于node的npm的使用命令.其实就是说,你要使用什么版本的node就用nvm来切换过来使用npm</p>
+<pre><code>nvm use 0 #切换至 0.12.7 版本 然后才调用npm安装库
+npm install -g mz-fis #安装 mz-fis 模块至全局目录，安装完成的路径是 /Users/&lt;你的用户名&gt;/.nvm/versions/node/v0.12.7/lib/mz-fis
+nvm use 4 #切换至 4.2.2 版本
+npm install -g react-native-cli #安装 react-native-cli 模块至全局目录，安装完成的路径是 /Users/&lt;你的用户名&gt;/.nvm/versions/node/v4.2.2/lib/react-native-cli
+</code></pre><p>查看此电脑的node版本数和名称</p>
+<pre><code>nvm ls
+</code></pre><p>查看服务器中看安装的node版本</p>
+<pre><code>nvm ls available
+</code></pre><p>切换此电脑中的node版本</p>
+<pre><code>nvm use 版本号
+</code></pre><p>3.接入和配置公众号</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我的天,我的记性实在是太烂了,我以前的弄过的微信公众号都忘记的差不多了,今天想来重新弄一下,结果..&lt;/p&gt;
+&lt;p&gt;俗话说:”好记性不如烂笔头..”&lt;/p&gt;
+&lt;p&gt;不说了,直接进入正题.&lt;/p&gt;
+&lt;p&gt;这次我还是开发订阅号(准备开始弄小程序了,来回忆回忆..)&lt;br&gt;1.肯
+    
+    </summary>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="微信" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+      <category term="nodejs" scheme="http://yoursite.com/tags/nodejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用nodejs管理工具nvm遇见的坑</title>
     <link href="http://yoursite.com/2017/01/18/%E7%94%A8nodejs%E7%9A%84%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7nvm%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91/"/>
     <id>http://yoursite.com/2017/01/18/用nodejs的管理工具nvm遇见的坑/</id>
     <published>2017-01-18T14:20:11.000Z</published>
-    <updated>2017-02-23T10:30:34.202Z</updated>
+    <updated>2017-03-06T09:36:57.196Z</updated>
     
     <content type="html"><![CDATA[<p>用nvm管理的几个nodejs版本,其中只有第一个下载的node版本的npm能使用,剩下的都不能使用!<br>我很纳闷,因为这样的话,除了能使用的那个node,剩下的根本都不能npm,那这个nodejs版本还有什么用.我越想越觉得不对,肯定是什么地方出错了,才会导致这样的结果..</p>
 <p>踩坑之旅开始了</p>
@@ -64,55 +173,6 @@ Path = %NVM_HOME%;%NVM_SYMLINK%  //这个是直接配置在系统的path里面�
       <category term="nodejs" scheme="http://yoursite.com/tags/nodejs/"/>
     
       <category term="nvm" scheme="http://yoursite.com/tags/nvm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开发微信公众号遇见的坑</title>
-    <link href="http://yoursite.com/2017/01/18/%E5%BC%80%E5%8F%91%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91/"/>
-    <id>http://yoursite.com/2017/01/18/开发微信公众号遇见的坑/</id>
-    <published>2017-01-18T14:20:11.000Z</published>
-    <updated>2017-02-23T09:33:44.490Z</updated>
-    
-    <content type="html"><![CDATA[<p>我的天,我的记性实在是太烂了,我以前的弄过的微信公众号都忘记的差不多了,今天想来重新弄一下,结果..</p>
-<p>俗话说:”好记性不如烂笔头..”</p>
-<p>不说了,直接进入正题.</p>
-<p>这次我还是开发订阅号(准备开始弄小程序了,来回忆回忆..)<br>1.肯定申请微信公众号的啦,然后正式的微信公众号在腾讯7个工作日内审批下来.如果实在没有公众号,可以申请一个测试的公众号,用于实验什么的..</p>
-<p>2.开发的时候,在自己的电脑上写的代码,是没办法暴露在外网上的,意思就是这段代码只能在自己的局域网上跑.然后就需要一个内网暴露的软件,什么花生壳什么的都可以,但是我记得我以前用的是ngrok这个软件,这个软件是外国的. 然后我这次用的时候,发现用不了了?! 然后我google了半天,原来是升级了,<a href="https://natapp.cn" target="_blank" rel="external">升级后的网址是这个:natapp.cn</a>,然后下载他的那个新的软件natapp.exe,然后按照<a href="https://natapp.cn/article/natapp_newbie" target="_blank" rel="external">natapp.exe的使用教程</a>来弄就OK了(申请账号的时候,可以用免费的套餐,但是免费的套餐有时候会自动更改那个外网的地址,所以开发的时候要经常去微信的后台去换地址,烦..).成功了.但是在开这个natapp.exe之前先,自己在自己的电脑上开一个端口80的.用什么阿帕奇服务器都行,以前我是用阿帕奇,现在get到了个,用python开web服务器,一行代码搞定..</p>
-<p>现在贴代码..</p>
-<pre><code>python -m SimpleHTTPServer 80  # python2
-python3 -m http.server 80  # python3
-</code></pre><p>简单吧..</p>
-<p>然后开完一个web服务器后就可以用natapp.exe,这个natapp的默认端口是80,所以开80端口的才有用(貌似微信的公众号的后台调试也是只支持80端口的..)</p>
-<p>这里有个小插曲,就是关于nodejs的,我这次用的后台是nodejs,然后node有两种版本,因为历史的原因,0.几版本的(公司做的稳定版)还有一个是4.几的(个人做的,以前叫io.js,这个分支的第一个数是偶数的版本,稳定,奇数是测试版本),然后我记得我以前玩node的时候,有些库是不能在其他版本用的,然后我就想到python可以两个版本同时装在一台电脑上,node应该也是可以的吧.所以我就又跳进坑了,琢磨了好久,发现有个有个叫nvm的东西,可以管理node版本(厉害!).然后我就想玩了一下,<a href="http://dajyaretakuya.blog.51cto.com/2823475/1760255/" target="_blank" rel="external">贴上一个大神的博客</a>,我想说:那个windows版的nvm好难下载,速度好慢,下载失败了好多次.. 但是最后还是被我弄下来了..<br>这篇博文是关于node的npm的使用命令.其实就是说,你要使用什么版本的node就用nvm来切换过来使用npm</p>
-<pre><code>nvm use 0 #切换至 0.12.7 版本 然后才调用npm安装库
-npm install -g mz-fis #安装 mz-fis 模块至全局目录，安装完成的路径是 /Users/&lt;你的用户名&gt;/.nvm/versions/node/v0.12.7/lib/mz-fis
-nvm use 4 #切换至 4.2.2 版本
-npm install -g react-native-cli #安装 react-native-cli 模块至全局目录，安装完成的路径是 /Users/&lt;你的用户名&gt;/.nvm/versions/node/v4.2.2/lib/react-native-cli
-</code></pre><p>查看此电脑的node版本数和名称</p>
-<pre><code>nvm ls
-</code></pre><p>查看服务器中看安装的node版本</p>
-<pre><code>nvm ls available
-</code></pre><p>切换此电脑中的node版本</p>
-<pre><code>nvm use 版本号
-</code></pre><p>3.接入和配置公众号</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我的天,我的记性实在是太烂了,我以前的弄过的微信公众号都忘记的差不多了,今天想来重新弄一下,结果..&lt;/p&gt;
-&lt;p&gt;俗话说:”好记性不如烂笔头..”&lt;/p&gt;
-&lt;p&gt;不说了,直接进入正题.&lt;/p&gt;
-&lt;p&gt;这次我还是开发订阅号(准备开始弄小程序了,来回忆回忆..)&lt;br&gt;1.肯
-    
-    </summary>
-    
-    
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
-    
-      <category term="微信" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1/"/>
-    
-      <category term="nodejs" scheme="http://yoursite.com/tags/nodejs/"/>
     
   </entry>
   
@@ -792,37 +852,6 @@ alert(message); //我是学友啊!
       <category term="js" scheme="http://yoursite.com/tags/js/"/>
     
       <category term="踩坑" scheme="http://yoursite.com/tags/%E8%B8%A9%E5%9D%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>终于看到你&quot;Hello World!&quot;</title>
-    <link href="http://yoursite.com/2016/10/06/oneblog/"/>
-    <id>http://yoursite.com/2016/10/06/oneblog/</id>
-    <published>2016-10-06T15:36:28.000Z</published>
-    <updated>2016-12-06T01:35:13.442Z</updated>
-    
-    <content type="html"><![CDATA[<p>#终于看到你”Hello World!”</p>
-<p>可能是我以前入门计算机IT烙下的毛病吧,学习一门关于计算机新的语言时,只要能弄出现”hello world!”说明你已经成功第一步.哈哈!</p>
-<p>国庆玩了几天,回来了,突然想写点东西,记录下一些事情,心想着那就写博客吧.但是我个人不喜欢博客网站的奇奇怪怪的约束与广告(想想以前申请的博客,都荒废了好久了)心想着,干脆自己弄一个博客网站出来算了.</p>
-<p>然后各种百度google.发现了这个hexo,而且这是一个基于nodejs搭建在github上的博客框架.而且最重要的是,hexo的作者是一个中国人,台湾省的一位大学生创建的. 这一下引起了我的兴趣.</p>
-<p>接着查找了各种文章各位大神博主写的关于hexo的博文,踩了无数的坑后,花了差不多两天时间,终于搭建出来了(然后顺手也把评论,做出来啦.哈哈).</p>
-<p>呜呜呜~~</p>
-<p><strong>亲爱的 “hello world!”</strong></p>
-<p>我终于看到你的出现了..</p>
-<p>接下来,我打算用我”辛苦”搭建的个人博客,记录一些生活上的感想,琐事,<br>记录一些工作上踩的各种坑(说起工作上遇见的各种坑,我想为我祈祷.阿门)..</p>
-<p>好啦,今天就说这么多.</p>
-<p>感想Litten提供的Yilia.我觉得很简洁,喜欢这样的主题.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;#终于看到你”Hello World!”&lt;/p&gt;
-&lt;p&gt;可能是我以前入门计算机IT烙下的毛病吧,学习一门关于计算机新的语言时,只要能弄出现”hello world!”说明你已经成功第一步.哈哈!&lt;/p&gt;
-&lt;p&gt;国庆玩了几天,回来了,突然想写点东西,记录下一些事情,心想着那就
-    
-    </summary>
-    
     
   </entry>
   

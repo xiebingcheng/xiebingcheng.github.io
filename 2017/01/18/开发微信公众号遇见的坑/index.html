@@ -22,7 +22,7 @@
 不说了,直接进入正题.
 这次我还是开发订阅号(准备开始弄小程序了,来回忆回忆..)1.肯定申请微信公众号的啦,然后正式的微信公众号在腾讯7个工作日内审批下来.如果实在没有公众号,可以申请一个测试的公众号,用于实验什么的..
 2.开发的时候,在自己的电脑上写的代码,">
-<meta property="og:updated_time" content="2017-02-23T09:33:44.490Z">
+<meta property="og:updated_time" content="2017-03-06T10:07:48.895Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="开发微信公众号遇见的坑">
 <meta name="twitter:description" content="我的天,我的记性实在是太烂了,我以前的弄过的微信公众号都忘记的差不多了,今天想来重新弄一下,结果..
@@ -179,8 +179,15 @@
 <p>2.开发的时候,在自己的电脑上写的代码,是没办法暴露在外网上的,意思就是这段代码只能在自己的局域网上跑.然后就需要一个内网暴露的软件,什么花生壳什么的都可以,但是我记得我以前用的是ngrok这个软件,这个软件是外国的. 然后我这次用的时候,发现用不了了?! 然后我google了半天,原来是升级了,<a href="https://natapp.cn" target="_blank" rel="external">升级后的网址是这个:natapp.cn</a>,然后下载他的那个新的软件natapp.exe,然后按照<a href="https://natapp.cn/article/natapp_newbie" target="_blank" rel="external">natapp.exe的使用教程</a>来弄就OK了(申请账号的时候,可以用免费的套餐,但是免费的套餐有时候会自动更改那个外网的地址,所以开发的时候要经常去微信的后台去换地址,烦..).成功了.但是在开这个natapp.exe之前先,自己在自己的电脑上开一个端口80的.用什么阿帕奇服务器都行,以前我是用阿帕奇,现在get到了个,用python开web服务器,一行代码搞定..</p>
 <p>现在贴代码..</p>
 <pre><code>python -m SimpleHTTPServer 80  # python2
-python3 -m http.server 80  # python3
-</code></pre><p>简单吧..</p>
+py -3 -m http.server 80  # python3
+</code></pre><p>我又发现一个,在nodejs下运行,开端口的..<br>先下载这个包 </p>
+<pre><code>npm install http-server -g //下载这个文件包
+</code></pre><p>然后就可以在站点的目录下输入</p>
+<pre><code>http-server //默认开80端口 和python一样的效果.
+</code></pre><p>更改端口,可以输入</p>
+<pre><code>http-server -p 端口号  //可以更改任意端口,但是不要被占用了.
+</code></pre><p>简单吧..(这是测试natapp有没有在运行.)</p>
+<p>(我发现一个问题,就是用python开端口的时候,就算是在局域网里的另一台机器都访问,如果端口下的文件夹是视频什么的比较大的文件,python会自动断开这个端口.但是是网页什么的,就没问题.用nodejs开端口,可以任意使用.原因暂时不明..)</p>
 <p>然后开完一个web服务器后就可以用natapp.exe,这个natapp的默认端口是80,所以开80端口的才有用(貌似微信的公众号的后台调试也是只支持80端口的..)</p>
 <p>这里有个小插曲,就是关于nodejs的,我这次用的后台是nodejs,然后node有两种版本,因为历史的原因,0.几版本的(公司做的稳定版)还有一个是4.几的(个人做的,以前叫io.js,这个分支的第一个数是偶数的版本,稳定,奇数是测试版本),然后我记得我以前玩node的时候,有些库是不能在其他版本用的,然后我就想到python可以两个版本同时装在一台电脑上,node应该也是可以的吧.所以我就又跳进坑了,琢磨了好久,发现有个有个叫nvm的东西,可以管理node版本(厉害!).然后我就想玩了一下,<a href="http://dajyaretakuya.blog.51cto.com/2823475/1760255/" target="_blank" rel="external">贴上一个大神的博客</a>,我想说:那个windows版的nvm好难下载,速度好慢,下载失败了好多次.. 但是最后还是被我弄下来了..<br>这篇博文是关于node的npm的使用命令.其实就是说,你要使用什么版本的node就用nvm来切换过来使用npm</p>
 <pre><code>nvm use 0 #切换至 0.12.7 版本 然后才调用npm安装库
@@ -268,18 +275,18 @@ npm install -g react-native-cli #安装 react-native-cli 模块至全局目录�
   
 <nav id="article-nav">
   
-    <a href="/2017/01/18/用nodejs的管理工具nvm遇见的坑/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/05/重新安装hexo博客的坑/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          开发微信公众号遇见的坑
+          重新安装hexo博客的坑
         
       </div>
     </a>
   
   
-    <a href="/2017/01/13/python的库win32的引入失败问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python的库win32的引入失败问题</div>
+    <a href="/2017/01/18/用nodejs的管理工具nvm遇见的坑/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">用nodejs管理工具nvm遇见的坑</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -380,7 +387,7 @@ var _hmt = _hmt || [];
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/2016/" style="font-size: 10px;">2016</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/get/" style="font-size: 10px;">get</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/js/" style="font-size: 17.5px;">js</a> <a href="/tags/nodejs/" style="font-size: 12.5px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/一些感悟/" style="font-size: 10px;">一些感悟</a> <a href="/tags/人工智能/" style="font-size: 12.5px;">人工智能</a> <a href="/tags/定义/" style="font-size: 10px;">定义</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/新知/" style="font-size: 20px;">新知</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/杂谈/" style="font-size: 15px;">杂谈</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/美酒/" style="font-size: 12.5px;">美酒</a> <a href="/tags/踩坑/" style="font-size: 12.5px;">踩坑</a>
+    				<a href="/tags/2016/" style="font-size: 10px;">2016</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/get/" style="font-size: 10px;">get</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/js/" style="font-size: 17.5px;">js</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 12.5px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/一些感悟/" style="font-size: 10px;">一些感悟</a> <a href="/tags/人工智能/" style="font-size: 12.5px;">人工智能</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/定义/" style="font-size: 10px;">定义</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/新知/" style="font-size: 20px;">新知</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/杂谈/" style="font-size: 15px;">杂谈</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/美酒/" style="font-size: 12.5px;">美酒</a> <a href="/tags/踩坑/" style="font-size: 12.5px;">踩坑</a>
     			</div>
     	</section>
     
