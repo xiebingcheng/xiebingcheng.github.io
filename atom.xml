@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-06T10:09:06.974Z</updated>
+  <updated>2017-03-14T05:53:42.988Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>个人简历</title>
+    <link href="http://yoursite.com/2017/03/13/xinjianli/"/>
+    <id>http://yoursite.com/2017/03/13/xinjianli/</id>
+    <published>2017-03-13T12:51:18.000Z</published>
+    <updated>2017-03-14T05:53:42.988Z</updated>
+    
+    <content type="html"><![CDATA[<p>基本信息<br>姓    名：谢秉成                         性    别：男<br>户    籍：广东省                          毕业院校：北华航天工业学院<br>手    机：15889380416                 电子邮箱：xiebingcheng321@163.com<br>学    历：大专                            出生年月：1991 . 7 . 7<br>专    业 :计算机应用技术                    Q      Q：751108002<br>到岗情况：一周以内                        求职方向 : web前端开发<br>期望薪资 : 面议<br>专业技能<br>熟练掌握HTML . CSS+DIV页面布局,并且兼容各种主流浏览器ie.chrome.firefox.opera；<br>熟练使用javascript, ajax能够编写基本的js原生代码,使用Ajax的异步请求实现开发；<br>熟练掌握.  jQuery . Zepto.  bootstrap等框架<br>熟悉jquery api,并能够编写基本的动态交互效果.<br>会用Photoshop进行切图,按照设计师的思路,把psd转化为html;<br>熟练使用svn,git等版本控制工具.<br>熟悉nodejs,并且基于nodejs+hexo搭建一个我本人的个人博客.<br>并且基于node+express+jade+bootstrap+mongoose+mongdb,搭建了一个包含连接数据库的整体小型网站玩具.<br>目前正在关注和学习react.js和python语言.<br>工作经验<br>  2015.3至2017.3             深圳金益铭有限公司                  前端开发工程师<br> 项目经验<br>    项目一：金融理财平台 (PC端)<br>开发技术:  HTML + CSS +  Javascript +jQuery<br>项目描述 :这是一款投资理财的项目,项目中有”我要理财”.”我要借款”.”安全保障”.”高家大院”.”我的账号”等模块. 有需要的人士可以在平台选择投资产品,没有账户的人士,可以在平台上注册账户并且管理自己的账户.<br>项目技术：<br>1、使用jQuery.  font-awesome进行项目的开发；<br>2、运用Ajax请求数据并从后台拿到数据进行渲染 . 数据交互;<br>3、运用雪碧图和font-awesome库,优化从后台请求的次数.<br>    项目二： 投资理财APP – 掌富宝(移动端)<br>开发技术:  HTML + CSS + Javascript+ zepto +flexible<br>    项目描述： 该项目是一款金融理财APP，共有”首页”.”产品中心”.”理财师专区”.”发现”.”我的”5个模块.”首页”模块可以看到最新金融产品和热点资讯等.”产品中心”可以选择合适的产品进行参考投资.”理财师专区”可以选择喜欢的理财师咨询理财.”我”就是个人中心,可以修改个人资料等.用户可以用这个手机端平台进行金融产品咨询投资理财等.<br>项目技术：<br>1、使用zepto. flexible进行移动端的开发；<br>2、使用H5新API : localStorage进行页面间的参数传递；<br>3、利用事件冒泡的机制,使用事件代理的方式给”未来”元素绑定事件.<br>项目三： 大学校园购物平台(移动端)<br>开发技术:  HTML + CSS + Javascript + zepto +flexible<br>项目描述：该项目是面向在校大学生做的购物平台买一些零食,饮料,速食等吃的和日常用品,此项目分为主页,详情页,购物车页面,注册页面,登录页面,订单确认页面,支付页面。用户可以使用这个平台实现,注册,登录,选购商品,下单,付款等一系列服务.<br>项目技术：<br>1、    使用zepto. flexible进行移动端的开发；<br>2、    使用tap事件,代替click事件优化事件响应,增加用户体验度<br>3、使用懒加载图片技术,缓解服务器的压力,减少或者延迟向服务器的http请求数.<br>自我评价<br>一夜失眠的执着<br>一个像素的坚持<br>一腔热血的激情</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;基本信息&lt;br&gt;姓    名：谢秉成                         性    别：男&lt;br&gt;户    籍：广东省                          毕业院校：北华航天工业学院&lt;br&gt;手    机：15889380416           
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>重新安装hexo博客的坑</title>
@@ -65,6 +84,100 @@ git config --global user.email &quot;YOUR EMAIL ADDRESS&quot;
       <category term="node" scheme="http://yoursite.com/tags/node/"/>
     
       <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>http请求的套路</title>
+    <link href="http://yoursite.com/2017/02/06/http%E8%AF%B7%E6%B1%82%E7%9A%84%E5%A5%97%E8%B7%AF/"/>
+    <id>http://yoursite.com/2017/02/06/http请求的套路/</id>
+    <published>2017-02-06T12:26:23.000Z</published>
+    <updated>2017-03-06T13:06:45.614Z</updated>
+    
+    <content type="html"><![CDATA[<p>作为搞互联网的,是该知道一些http的请求了,现整理一些:</p>
+<h2>http请求</h2>
+
+<p>1.用户打开浏览器,输入url地址后,浏览器搜索自身的DNS缓存,如果搜不到或者DNS实效的情况下.</p>
+<p>2.搜索操作系统自身的DNS缓存,如果找到还是找不到的话.</p>
+<p>3.浏览器读取本地的host文件.如果还是没有的话</p>
+<p>4.浏览器会发起一个DNS的一个系统调用<br>(1)发起DNS调用后,宽带运营商的服务器查看本身的缓存,还是没有的情况下.<br>(2)浏览器会层层的往上查找,找到后,运营商服务器把结果返回给系统的内核,然后操作系统读取到了以后,操作系统返回给浏览器.  最终浏览器拿到了这个网站和对应的IP地址.</p>
+<p>5.浏览器获得对应的域名IP地址后,发起HTTP “三次握手”,<br>三次握手:<br>(1)客户端向服务器端确认请求有没有错误.<br>(2)服务器端回应,一切OK<br>(3)客户端接到回应,继续和服务器说,”那就开始吧” 类似的话</p>
+<p>6.TCP/IP连接搞起来了,浏览器向服务器端发出HTTP请求.使用的方法比如 GET ,post 等等方法.</p>
+<p>7.服务器接到请求,根据路径参数,经过后端代码的一些处理后,把结果返回.比如请求的是网站的index页面,就返回给这个页面的html代码.</p>
+<p>8.浏览器拿到这些代码,开始解析和渲染出来页面.(当然,这次只是请求html代码,还有css样式的代码,和js代码,图片等资源.如果要请求的话,就继续重复上面的步骤)</p>
+<p>9.所有的源文件经过上面的步骤拿到后,经过浏览器的解析,就呈现出完整的页面给用户使用了.</p>
+<p>所以怪不得,要尽量减少css样式表和js的请求,能合并的尽量合并,图片也是,能变成雪碧图的也尽量变成雪碧图.因为上面的请求感觉太复杂了,浪费时间和资源..</p>
+<h2>HTTP的请求方法.</h2> 
+
+<p>GET方法:读取,获取<br>POST方法: 提交数据<br>delete:删除(请求服务器删除某个文件)<br>PUT:更新(向指定资源上传新的内容)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;作为搞互联网的,是该知道一些http的请求了,现整理一些:&lt;/p&gt;
+&lt;h2&gt;http请求&lt;/h2&gt;
+
+&lt;p&gt;1.用户打开浏览器,输入url地址后,浏览器搜索自身的DNS缓存,如果搜不到或者DNS实效的情况下.&lt;/p&gt;
+&lt;p&gt;2.搜索操作系统自身的DNS缓存,如果找到还是找不
+    
+    </summary>
+    
+    
+      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+      <category term="网络请求" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用nodejs管理工具nvm遇见的坑</title>
+    <link href="http://yoursite.com/2017/01/18/%E7%94%A8nodejs%E7%9A%84%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7nvm%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91/"/>
+    <id>http://yoursite.com/2017/01/18/用nodejs的管理工具nvm遇见的坑/</id>
+    <published>2017-01-18T14:20:11.000Z</published>
+    <updated>2017-03-06T09:36:57.196Z</updated>
+    
+    <content type="html"><![CDATA[<p>用nvm管理的几个nodejs版本,其中只有第一个下载的node版本的npm能使用,剩下的都不能使用!<br>我很纳闷,因为这样的话,除了能使用的那个node,剩下的根本都不能npm,那这个nodejs版本还有什么用.我越想越觉得不对,肯定是什么地方出错了,才会导致这样的结果..</p>
+<p>踩坑之旅开始了</p>
+<p>事情是这样的,因为项目不同,有时候要用的node版本也不同.然后我百度知道了一个nodejs的管理工具叫nvm,<a href="http://dajyaretakuya.blog.51cto.com/2823475/1760255/" target="_blank" rel="external">贴上一个大神的博客.</a><br>我用的是windows版本的nvm.版本号是1.1.1</p>
+<p>然后一个巨大的坑出现了,我第一次用这个nvm. 刚刚开始安装的很顺利,就是下载nvm有点难下载,速度很慢. 然后安装基本无压力,nvm会自动的帮你把环境变量配置好,当然,也可以自己配置,因为有时候想要它的文件地址掌控在自己的手中.<br>环境变量配置:</p>
+<pre><code>NVM_HOME = C:\nvm  //新建这两个变量
+NVM_SYMLINK = C:\nodejs 
+Path = %NVM_HOME%;%NVM_SYMLINK%  //这个是直接配置在系统的path里面的.
+</code></pre><p>弄好nvm后,通过命令下载nodejs</p>
+<pre><code>nvm install 版本号
+</code></pre><p>然后我下载的第一个node一切正常,npm什么的正常使用.<br>但是当我的下载的第二个第三个node的时候,发现npm根本不能使用.</p>
+<p>发现这个问题后,我百度,google了很久,看了许多博文,发现他们的方法不太适合我这个问题.我也配置了无数遍的环境变量,结果还是不行.基本上方法都用了一遍,这个问题就是不能解决.</p>
+<p>到了后面,我看到一篇博文的<a href="http://blog.csdn.net/stopcpp/article/details/53909558" target="_blank" rel="external">关于npm安装和环境变量的配置</a>给了我点启发,他把npm的包,放到了他新建的nvm文件夹里.<br>我就在想,npm包的事,结果我发现,除了第一个安装的node里面的node_modules是有npm这个文件,剩下的都是空的,我想,这个应该就是问题的所在了吧.<br>然后我试了试,把第一个成功的node版本的node_modules文件夹里的npm文直接复制到另一个版本的node_modules文件夹里面.结果奇迹出现了,切换到这个版本的node后,输入命令 npm -v 发现有输出版本号了. </p>
+<p>到此,问题解决了.</p>
+<p>但是还有更坑的是什么,我还是不甘心,又试了一下nvm,我把一些不能用npm的node直接从文件夹中删除.然后又重新通过命令 nvm install 版本号 下载这个node版本, 发现这个node的npm有了! </p>
+<p>对,你没听错, 有了!</p>
+<p>我只想说,兄弟,不带这么玩的吧..</p>
+<p>对了,还有个情况就是,npm下载东西,因为服务器在国外,速度很慢,甚至下载不成功.所以要通过国内的镜像服务器来下载, 比如 淘宝的 和 cnpm</p>
+<p>这里,还有一个叫nrm的东西,很好用,就是专门处理这个情况的.</p>
+<p>nrm的用法是:</p>
+<pre><code>npm install -g nrm //全局下载安装这个nrm 
+</code></pre><p>列出所有可以用的npm的镜像源地址</p>
+<pre><code>nrm ls //安装后可以使用这个命令
+</code></pre><p>然后,想用哪个镜像源,就用哪个,国内肯定是cnpm和淘宝(淘宝10分钟同步国外的npm库一次,cnpm15分钟同步一次)的啦.</p>
+<pre><code>nrm use cnpm //使用cnpm这个镜像源下网络载nodejs的库.提升网速度
+</code></pre><p>测试每个镜像源的链接速度</p>
+<pre><code>nrm test //测试速度,一般淘宝的最快
+</code></pre><p>好啦,这个工具我感觉挺好用的,特别是下载库的时候速度太慢,可以切换镜像源,用这个nrm最方便.连地址你都可以不用百度了,直接用nrm帮你换地址就成了.</p>
+<p>记得,一定要加 -g 全局安装 nrm 让其他版本的nodejs都能用,所以记得,我觉得不仅仅是nrm要全局安装,其实如果用这个nvm管理多个node的话,其他的node也要用库,全局安装就不用这么麻烦,每个都要下载一遍,直接全局安装就行.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;用nvm管理的几个nodejs版本,其中只有第一个下载的node版本的npm能使用,剩下的都不能使用!&lt;br&gt;我很纳闷,因为这样的话,除了能使用的那个node,剩下的根本都不能npm,那这个nodejs版本还有什么用.我越想越觉得不对,肯定是什么地方出错了,才会导致这样的结
+    
+    </summary>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="nodejs" scheme="http://yoursite.com/tags/nodejs/"/>
+    
+      <category term="nvm" scheme="http://yoursite.com/tags/nvm/"/>
     
   </entry>
   
@@ -121,58 +234,6 @@ npm install -g react-native-cli #安装 react-native-cli 模块至全局目录�
       <category term="微信" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1/"/>
     
       <category term="nodejs" scheme="http://yoursite.com/tags/nodejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用nodejs管理工具nvm遇见的坑</title>
-    <link href="http://yoursite.com/2017/01/18/%E7%94%A8nodejs%E7%9A%84%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7nvm%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91/"/>
-    <id>http://yoursite.com/2017/01/18/用nodejs的管理工具nvm遇见的坑/</id>
-    <published>2017-01-18T14:20:11.000Z</published>
-    <updated>2017-03-06T09:36:57.196Z</updated>
-    
-    <content type="html"><![CDATA[<p>用nvm管理的几个nodejs版本,其中只有第一个下载的node版本的npm能使用,剩下的都不能使用!<br>我很纳闷,因为这样的话,除了能使用的那个node,剩下的根本都不能npm,那这个nodejs版本还有什么用.我越想越觉得不对,肯定是什么地方出错了,才会导致这样的结果..</p>
-<p>踩坑之旅开始了</p>
-<p>事情是这样的,因为项目不同,有时候要用的node版本也不同.然后我百度知道了一个nodejs的管理工具叫nvm,<a href="http://dajyaretakuya.blog.51cto.com/2823475/1760255/" target="_blank" rel="external">贴上一个大神的博客.</a><br>我用的是windows版本的nvm.版本号是1.1.1</p>
-<p>然后一个巨大的坑出现了,我第一次用这个nvm. 刚刚开始安装的很顺利,就是下载nvm有点难下载,速度很慢. 然后安装基本无压力,nvm会自动的帮你把环境变量配置好,当然,也可以自己配置,因为有时候想要它的文件地址掌控在自己的手中.<br>环境变量配置:</p>
-<pre><code>NVM_HOME = C:\nvm  //新建这两个变量
-NVM_SYMLINK = C:\nodejs 
-Path = %NVM_HOME%;%NVM_SYMLINK%  //这个是直接配置在系统的path里面的.
-</code></pre><p>弄好nvm后,通过命令下载nodejs</p>
-<pre><code>nvm install 版本号
-</code></pre><p>然后我下载的第一个node一切正常,npm什么的正常使用.<br>但是当我的下载的第二个第三个node的时候,发现npm根本不能使用.</p>
-<p>发现这个问题后,我百度,google了很久,看了许多博文,发现他们的方法不太适合我这个问题.我也配置了无数遍的环境变量,结果还是不行.基本上方法都用了一遍,这个问题就是不能解决.</p>
-<p>到了后面,我看到一篇博文的<a href="http://blog.csdn.net/stopcpp/article/details/53909558" target="_blank" rel="external">关于npm安装和环境变量的配置</a>给了我点启发,他把npm的包,放到了他新建的nvm文件夹里.<br>我就在想,npm包的事,结果我发现,除了第一个安装的node里面的node_modules是有npm这个文件,剩下的都是空的,我想,这个应该就是问题的所在了吧.<br>然后我试了试,把第一个成功的node版本的node_modules文件夹里的npm文直接复制到另一个版本的node_modules文件夹里面.结果奇迹出现了,切换到这个版本的node后,输入命令 npm -v 发现有输出版本号了. </p>
-<p>到此,问题解决了.</p>
-<p>但是还有更坑的是什么,我还是不甘心,又试了一下nvm,我把一些不能用npm的node直接从文件夹中删除.然后又重新通过命令 nvm install 版本号 下载这个node版本, 发现这个node的npm有了! </p>
-<p>对,你没听错, 有了!</p>
-<p>我只想说,兄弟,不带这么玩的吧..</p>
-<p>对了,还有个情况就是,npm下载东西,因为服务器在国外,速度很慢,甚至下载不成功.所以要通过国内的镜像服务器来下载, 比如 淘宝的 和 cnpm</p>
-<p>这里,还有一个叫nrm的东西,很好用,就是专门处理这个情况的.</p>
-<p>nrm的用法是:</p>
-<pre><code>npm install -g nrm //全局下载安装这个nrm 
-</code></pre><p>列出所有可以用的npm的镜像源地址</p>
-<pre><code>nrm ls //安装后可以使用这个命令
-</code></pre><p>然后,想用哪个镜像源,就用哪个,国内肯定是cnpm和淘宝(淘宝10分钟同步国外的npm库一次,cnpm15分钟同步一次)的啦.</p>
-<pre><code>nrm use cnpm //使用cnpm这个镜像源下网络载nodejs的库.提升网速度
-</code></pre><p>测试每个镜像源的链接速度</p>
-<pre><code>nrm test //测试速度,一般淘宝的最快
-</code></pre><p>好啦,这个工具我感觉挺好用的,特别是下载库的时候速度太慢,可以切换镜像源,用这个nrm最方便.连地址你都可以不用百度了,直接用nrm帮你换地址就成了.</p>
-<p>记得,一定要加 -g 全局安装 nrm 让其他版本的nodejs都能用,所以记得,我觉得不仅仅是nrm要全局安装,其实如果用这个nvm管理多个node的话,其他的node也要用库,全局安装就不用这么麻烦,每个都要下载一遍,直接全局安装就行.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;用nvm管理的几个nodejs版本,其中只有第一个下载的node版本的npm能使用,剩下的都不能使用!&lt;br&gt;我很纳闷,因为这样的话,除了能使用的那个node,剩下的根本都不能npm,那这个nodejs版本还有什么用.我越想越觉得不对,肯定是什么地方出错了,才会导致这样的结
-    
-    </summary>
-    
-    
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
-    
-      <category term="nodejs" scheme="http://yoursite.com/tags/nodejs/"/>
-    
-      <category term="nvm" scheme="http://yoursite.com/tags/nvm/"/>
     
   </entry>
   
@@ -441,25 +502,6 @@ Path = %NVM_HOME%;%NVM_SYMLINK%  //这个是直接配置在系统的path里面�
       <category term="新知" scheme="http://yoursite.com/tags/%E6%96%B0%E7%9F%A5/"/>
     
       <category term="美酒" scheme="http://yoursite.com/tags/%E7%BE%8E%E9%85%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>个人简历</title>
-    <link href="http://yoursite.com/2016/12/19/xinjianli/"/>
-    <id>http://yoursite.com/2016/12/19/xinjianli/</id>
-    <published>2016-12-19T12:51:18.000Z</published>
-    <updated>2016-12-19T14:46:23.343Z</updated>
-    
-    <content type="html"><![CDATA[<p>基本信息<br>姓    名：谢秉成                         性    别：男<br>户    籍：广东省                          毕业院校：北华航天工业学院<br>手    机：15889380416                 电子邮箱：xiebingcheng321@163.com<br>学    历：大专                            出生年月：1991 . 7 . 7<br>专    业 :计算机应用技术                    Q      Q：751108002<br>到岗情况：一周以内                        求职方向 : web前端开发<br>期望薪资 : 面议<br>专业技能<br>熟练掌握HTML . CSS+DIV页面布局,并且兼容各种主流浏览器ie.chrome.firefox.opera；<br>熟练使用javascript, ajax能够编写基本的js原生代码,使用Ajax的异步请求实现开发；<br>熟练掌握.  jQuery . Zepto、vue.js. bootstrap等框架<br>熟悉jquery api,并能够编写基本的动态交互效果.<br>会用Photoshop进行切图,按照设计师的思路,把psd转化为html;<br>熟练使用svn,git等版本控制工具.<br>熟悉nodejs,并且基于nodejs搭建一个我本人的个人博客.<br>目前正在关注和学习react.js和python语言.<br>工作经验<br>  2014.7至2016.4             深圳金益铭有限公司                  前端开发工程师<br>2016.4至2016.11            深圳高搜易有限公司                    前端开发工程师<br> 项目经验<br>    项目一：金融理财平台 (PC端)<br>开发技术:  HTML + CSS +  Javascript +jQuery<br>项目描述 :这是一款投资理财的项目,项目中有”我要理财”.”我要借款”.”安全保障”.”高家大院”.”我的账号”等模块. 有需要的人士可以在平台选择投资产品,没有账户的人士,可以在平台上注册账户并且管理自己的账户.<br>项目技术：<br>1、使用jQuery.  font-awesome进行项目的开发；<br>2、运用Ajax请求数据并从后台拿到数据进行渲染 . 数据交互;<br>3、运用雪碧图和font-awesome库,优化从后台请求的次数.<br>    项目二： 投资理财APP – 掌富宝(Hybrid App)<br>开发技术:  HTML + CSS + Javascript+ zepto +flexible<br>    项目描述： 该项目是一款金融理财Hybrid App，共有”首页”.”产品中心”.”理财师专区”.”发现”.”我的”5个模块.”首页”模块可以看到最新金融产品和热点资讯等.”产品中心”可以选择合适的产品进行参考投资.”理财师专区”可以选择喜欢的理财师咨询理财.”我”就是个人中心,可以修改个人资料等.用户可以用这个手机端平台进行金融产品咨询投资理财等.<br>项目技术：<br>1、使用zepto. flexible进行移动端的开发；<br>2、使用H5新API : localStorage进行页面间的参数传递；<br>3、利用事件冒泡的机制,使用事件代理的方式给”未来”元素绑定事件.<br>项目三： 大学校园购物平台(Hybrid App)<br>开发技术:  HTML + CSS + Javascript + zepto +flexible<br>项目描述：该项目是Hybrid App，该项目是面向在校大学生做的购物平台买一些零食,饮料,速食等吃的和日常用品,此项目分为主页,详情页,购物车页面,注册页面,登录页面,订单确认页面,支付页面。用户可以使用这个平台实现,注册,登录,选购商品,下单,付款等一系列服务.<br>项目技术：<br>1、    使用zepto. flexible进行移动端的开发；<br>2、    使用tap事件,代替click事件优化事件响应,增加用户体验度<br>3、使用懒加载图片技术,缓解服务器的压力,减少或者延迟向服务器请求数.<br>自我评价<br>一夜失眠的执着<br>一个像素的坚持<br> 一腔热血的激情</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;基本信息&lt;br&gt;姓    名：谢秉成                         性    别：男&lt;br&gt;户    籍：广东省                          毕业院校：北华航天工业学院&lt;br&gt;手    机：15889380416           
-    
-    </summary>
-    
     
   </entry>
   
@@ -808,50 +850,6 @@ top:0;left0;bottom:0;right:0;
     
     
       <category term="css" scheme="http://yoursite.com/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>了解es6时踩的坑</title>
-    <link href="http://yoursite.com/2016/10/07/%E4%BA%86%E8%A7%A3es6%E6%97%B6%E8%B8%A9%E7%9A%84%E5%9D%91/"/>
-    <id>http://yoursite.com/2016/10/07/了解es6时踩的坑/</id>
-    <published>2016-10-07T07:42:20.000Z</published>
-    <updated>2016-12-07T14:35:12.545Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天虽然是国庆放假最后一天,还是闲来无聊,干脆去了解一下javascript的es6. </p>
-<p>结果差一点掉坑里爬不上来了.想着还是记录一下坑的位置,避免以后还会出现.好记性不如烂笔头嘛.</p>
-<p>好了,事情是这样子的</p>
-<p>我在学习es6时,看到es6推出一个模板字符串,用${}弄起来.(怎么给我感觉这么想vue,avalon那些插值表达式嘞)<br>在以前,我们想把字符串连接起来,用的是+号连接,比如:</p>
-<pre><code>var name = &quot;学友&quot;;
-var message=&apos;我是&apos;+name+&apos;啊!&apos;;
-alert(message); //我是学友啊!
-</code></pre><p>这样用+号,如果是很多个变量都需要连接的话,就会非常的麻烦,而且前端也不好去维护对吧.<br>es6新增加了一种模板字符串的方法.</p>
-<pre><code>var name=&apos;学友&apos;;
-var message=`我是${name}啊!`
-alert(message); //我是学友啊!
-</code></pre><blockquote>
-<p>用这个方法是不是感觉会好那么一丢丢?</p>
-</blockquote>
-<p>那么,坑来了,请注意message变量的那个类似引号的东西, 我刚开始以为是引号,然后浏览器一直报错,刚开始我以为是浏览器可能不支持es6,我于是把谷歌浏览器更新了一遍,结果还是报错..</p>
-<blockquote>
-<p>顿时感觉好无助, 然后默默的点燃一根烟,突然发现,例子上的``好像不想是引号.  才发现,原来这个是tab键上面的那个键的符号(一下子我不知道这个符号是叫什么..).</p>
-</blockquote>
-<p>我的天..  (不过还是得怪我没弄清楚,今天记录下来,以后免得忘记了..)</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天虽然是国庆放假最后一天,还是闲来无聊,干脆去了解一下javascript的es6. &lt;/p&gt;
-&lt;p&gt;结果差一点掉坑里爬不上来了.想着还是记录一下坑的位置,避免以后还会出现.好记性不如烂笔头嘛.&lt;/p&gt;
-&lt;p&gt;好了,事情是这样子的&lt;/p&gt;
-&lt;p&gt;我在学习es6时,看到es
-    
-    </summary>
-    
-    
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
-    
-      <category term="踩坑" scheme="http://yoursite.com/tags/%E8%B8%A9%E5%9D%91/"/>
     
   </entry>
   

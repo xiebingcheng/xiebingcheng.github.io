@@ -6,30 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>python的库win32的引入失败问题 | xiebingcheng的博客(每天进步一点点)</title>
+  <title>Archives: 2017/2 | xiebingcheng的博客(每天进步一点点)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="呜,心累.为了用这个win32库.
-我用这个库,出现了一些问题.
-1.这个库是.exe文件的形式,要安装对号入座的版本,比如你电脑的python是64位 2.7版本的.那这个win32也是要安装64位2.7版本的,我试了好多次,现在这个阶段不能用pip安装win32.
-2.安装完成,版本正确,但是也是不能调用,特别在pyCharm这个编辑器上一直报错,找不到这个文件.
-解决方法是: 是用 .pth">
-<meta property="og:type" content="article">
-<meta property="og:title" content="python的库win32的引入失败问题">
-<meta property="og:url" content="http://yoursite.com/2017/01/13/python的库win32的引入失败问题/index.html">
+  <meta name="description" content="记录工作生活点点滴滴">
+<meta property="og:type" content="website">
+<meta property="og:title" content="xiebingcheng的博客(每天进步一点点)">
+<meta property="og:url" content="http://yoursite.com/archives/2017/02/index.html">
 <meta property="og:site_name" content="xiebingcheng的博客(每天进步一点点)">
-<meta property="og:description" content="呜,心累.为了用这个win32库.
-我用这个库,出现了一些问题.
-1.这个库是.exe文件的形式,要安装对号入座的版本,比如你电脑的python是64位 2.7版本的.那这个win32也是要安装64位2.7版本的,我试了好多次,现在这个阶段不能用pip安装win32.
-2.安装完成,版本正确,但是也是不能调用,特别在pyCharm这个编辑器上一直报错,找不到这个文件.
-解决方法是: 是用 .pth">
-<meta property="og:updated_time" content="2017-01-13T08:53:12.717Z">
+<meta property="og:description" content="记录工作生活点点滴滴">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python的库win32的引入失败问题">
-<meta name="twitter:description" content="呜,心累.为了用这个win32库.
-我用这个库,出现了一些问题.
-1.这个库是.exe文件的形式,要安装对号入座的版本,比如你电脑的python是64位 2.7版本的.那这个win32也是要安装64位2.7版本的,我试了好多次,现在这个阶段不能用pip安装win32.
-2.安装完成,版本正确,但是也是不能调用,特别在pyCharm这个编辑器上一直报错,找不到这个文件.
-解决方法是: 是用 .pth">
+<meta name="twitter:title" content="xiebingcheng的博客(每天进步一点点)">
+<meta name="twitter:description" content="记录工作生活点点滴滴">
   
     <link rel="alternative" href="/atom.xml" title="xiebingcheng的博客(每天进步一点点)" type="application/atom+xml">
   
@@ -154,151 +141,54 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-python的库win32的引入失败问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      python的库win32的引入失败问题
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/02/06/http请求的套路/" class="archive-article-date">
+  	<time datetime="2017-02-06T12:26:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-06</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/02/06/http请求的套路/">http请求的套路</a>
     </h1>
   
 
-        <a href="/2017/01/13/python的库win32的引入失败问题/" class="archive-article-date">
-  	<time datetime="2017-01-13T08:43:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-13</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>呜,心累.为了用这个win32库.</p>
-<p>我用这个库,出现了一些问题.</p>
-<p>1.这个库是.exe文件的形式,要安装对号入座的版本,比如你电脑的python是64位 2.7版本的.那这个win32也是要安装64位2.7版本的,我试了好多次,现在这个阶段不能用pip安装win32.</p>
-<p>2.安装完成,版本正确,但是也是不能调用,特别在pyCharm这个编辑器上一直报错,找不到这个文件.</p>
-<p>解决方法是: 是用 .pth 文件来实现。Python 在遍历已知的库文件目录过程中，如果见到一个 .pth 文件，就会将文件中所记录的路径加入到 sys.path 设置中，这样 .pth 文件说指明的库也就可以被 Python 运行环境找到。<br>找到Python安装目录下的site-packages文件夹（$Python/Lib/site-packages）。</p>
-<p>在该目录下创建一个PATH文件（*.pth），例如 MyModule.pth，打开新创建的文件，将你Python源文件所在的目录写入文件中。</p>
-<p>比如我的saySomething.py文件的目录是E:/PythonSpace，PATH文件名为MyModule.pth。所以我的MyModule.pth的文件内容为：E:/PythonSpace。</p>
-<p>除此之外，在高级设置中添加环境变量python/Lib/site-packages之后，重启下pycharm就可以在pycharm中 import win32api 了。</p>
-<p>这些方法来自网络,各个博主的方法.我在把其中的方法提炼出来.在这里要谢谢各位博主帮忙.</p>
-<p>(我用的是建一个.pth文件弄好的,现在pyCharm对于win32库没报错了.)</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http/">http</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络请求/">网络请求</a></li></ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        <div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode"></div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/01/18/开发微信公众号遇见的坑/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          开发微信公众号遇见的坑
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/01/13/重新安装python遇见的坑/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">重新安装python遇见的坑</div>
-      <i class="icon-circle-right"></i>
-    </a>
+    </div></section>
   
-</nav>
 
-
-
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="python的库win32的引入失败问题" data-title="python的库win32的引入失败问题" data-url="http://yoursite.com/2017/01/13/python的库win32的引入失败问题/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"xiebingcheng"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
-
+    
 
 
       </div>
@@ -320,8 +210,8 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
