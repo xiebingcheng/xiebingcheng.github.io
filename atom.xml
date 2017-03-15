@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-14T05:53:42.988Z</updated>
+  <updated>2017-03-06T10:09:06.974Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,25 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>个人简历</title>
-    <link href="http://yoursite.com/2017/03/13/xinjianli/"/>
-    <id>http://yoursite.com/2017/03/13/xinjianli/</id>
-    <published>2017-03-13T12:51:18.000Z</published>
-    <updated>2017-03-14T05:53:42.988Z</updated>
-    
-    <content type="html"><![CDATA[<p>基本信息<br>姓    名：谢秉成                         性    别：男<br>户    籍：广东省                          毕业院校：北华航天工业学院<br>手    机：15889380416                 电子邮箱：xiebingcheng321@163.com<br>学    历：大专                            出生年月：1991 . 7 . 7<br>专    业 :计算机应用技术                    Q      Q：751108002<br>到岗情况：一周以内                        求职方向 : web前端开发<br>期望薪资 : 面议<br>专业技能<br>熟练掌握HTML . CSS+DIV页面布局,并且兼容各种主流浏览器ie.chrome.firefox.opera；<br>熟练使用javascript, ajax能够编写基本的js原生代码,使用Ajax的异步请求实现开发；<br>熟练掌握.  jQuery . Zepto.  bootstrap等框架<br>熟悉jquery api,并能够编写基本的动态交互效果.<br>会用Photoshop进行切图,按照设计师的思路,把psd转化为html;<br>熟练使用svn,git等版本控制工具.<br>熟悉nodejs,并且基于nodejs+hexo搭建一个我本人的个人博客.<br>并且基于node+express+jade+bootstrap+mongoose+mongdb,搭建了一个包含连接数据库的整体小型网站玩具.<br>目前正在关注和学习react.js和python语言.<br>工作经验<br>  2015.3至2017.3             深圳金益铭有限公司                  前端开发工程师<br> 项目经验<br>    项目一：金融理财平台 (PC端)<br>开发技术:  HTML + CSS +  Javascript +jQuery<br>项目描述 :这是一款投资理财的项目,项目中有”我要理财”.”我要借款”.”安全保障”.”高家大院”.”我的账号”等模块. 有需要的人士可以在平台选择投资产品,没有账户的人士,可以在平台上注册账户并且管理自己的账户.<br>项目技术：<br>1、使用jQuery.  font-awesome进行项目的开发；<br>2、运用Ajax请求数据并从后台拿到数据进行渲染 . 数据交互;<br>3、运用雪碧图和font-awesome库,优化从后台请求的次数.<br>    项目二： 投资理财APP – 掌富宝(移动端)<br>开发技术:  HTML + CSS + Javascript+ zepto +flexible<br>    项目描述： 该项目是一款金融理财APP，共有”首页”.”产品中心”.”理财师专区”.”发现”.”我的”5个模块.”首页”模块可以看到最新金融产品和热点资讯等.”产品中心”可以选择合适的产品进行参考投资.”理财师专区”可以选择喜欢的理财师咨询理财.”我”就是个人中心,可以修改个人资料等.用户可以用这个手机端平台进行金融产品咨询投资理财等.<br>项目技术：<br>1、使用zepto. flexible进行移动端的开发；<br>2、使用H5新API : localStorage进行页面间的参数传递；<br>3、利用事件冒泡的机制,使用事件代理的方式给”未来”元素绑定事件.<br>项目三： 大学校园购物平台(移动端)<br>开发技术:  HTML + CSS + Javascript + zepto +flexible<br>项目描述：该项目是面向在校大学生做的购物平台买一些零食,饮料,速食等吃的和日常用品,此项目分为主页,详情页,购物车页面,注册页面,登录页面,订单确认页面,支付页面。用户可以使用这个平台实现,注册,登录,选购商品,下单,付款等一系列服务.<br>项目技术：<br>1、    使用zepto. flexible进行移动端的开发；<br>2、    使用tap事件,代替click事件优化事件响应,增加用户体验度<br>3、使用懒加载图片技术,缓解服务器的压力,减少或者延迟向服务器的http请求数.<br>自我评价<br>一夜失眠的执着<br>一个像素的坚持<br>一腔热血的激情</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;基本信息&lt;br&gt;姓    名：谢秉成                         性    别：男&lt;br&gt;户    籍：广东省                          毕业院校：北华航天工业学院&lt;br&gt;手    机：15889380416           
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>重新安装hexo博客的坑</title>
@@ -850,6 +831,50 @@ top:0;left0;bottom:0;right:0;
     
     
       <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>了解es6时踩的坑</title>
+    <link href="http://yoursite.com/2016/10/07/%E4%BA%86%E8%A7%A3es6%E6%97%B6%E8%B8%A9%E7%9A%84%E5%9D%91/"/>
+    <id>http://yoursite.com/2016/10/07/了解es6时踩的坑/</id>
+    <published>2016-10-07T07:42:20.000Z</published>
+    <updated>2016-12-07T14:35:12.545Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天虽然是国庆放假最后一天,还是闲来无聊,干脆去了解一下javascript的es6. </p>
+<p>结果差一点掉坑里爬不上来了.想着还是记录一下坑的位置,避免以后还会出现.好记性不如烂笔头嘛.</p>
+<p>好了,事情是这样子的</p>
+<p>我在学习es6时,看到es6推出一个模板字符串,用${}弄起来.(怎么给我感觉这么想vue,avalon那些插值表达式嘞)<br>在以前,我们想把字符串连接起来,用的是+号连接,比如:</p>
+<pre><code>var name = &quot;学友&quot;;
+var message=&apos;我是&apos;+name+&apos;啊!&apos;;
+alert(message); //我是学友啊!
+</code></pre><p>这样用+号,如果是很多个变量都需要连接的话,就会非常的麻烦,而且前端也不好去维护对吧.<br>es6新增加了一种模板字符串的方法.</p>
+<pre><code>var name=&apos;学友&apos;;
+var message=`我是${name}啊!`
+alert(message); //我是学友啊!
+</code></pre><blockquote>
+<p>用这个方法是不是感觉会好那么一丢丢?</p>
+</blockquote>
+<p>那么,坑来了,请注意message变量的那个类似引号的东西, 我刚开始以为是引号,然后浏览器一直报错,刚开始我以为是浏览器可能不支持es6,我于是把谷歌浏览器更新了一遍,结果还是报错..</p>
+<blockquote>
+<p>顿时感觉好无助, 然后默默的点燃一根烟,突然发现,例子上的``好像不想是引号.  才发现,原来这个是tab键上面的那个键的符号(一下子我不知道这个符号是叫什么..).</p>
+</blockquote>
+<p>我的天..  (不过还是得怪我没弄清楚,今天记录下来,以后免得忘记了..)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天虽然是国庆放假最后一天,还是闲来无聊,干脆去了解一下javascript的es6. &lt;/p&gt;
+&lt;p&gt;结果差一点掉坑里爬不上来了.想着还是记录一下坑的位置,避免以后还会出现.好记性不如烂笔头嘛.&lt;/p&gt;
+&lt;p&gt;好了,事情是这样子的&lt;/p&gt;
+&lt;p&gt;我在学习es6时,看到es
+    
+    </summary>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="踩坑" scheme="http://yoursite.com/tags/%E8%B8%A9%E5%9D%91/"/>
     
   </entry>
   
