@@ -6,30 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>了解es6时踩的坑 | xiebingcheng的博客(每天进步一点点)</title>
+  <title>Tag: html | xiebingcheng的博客(每天进步一点点)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天虽然是国庆放假最后一天,还是闲来无聊,干脆去了解一下javascript的es6. 
-结果差一点掉坑里爬不上来了.想着还是记录一下坑的位置,避免以后还会出现.好记性不如烂笔头嘛.
-好了,事情是这样子的
-我在学习es6时,看到es6推出一个模板字符串,用${}弄起来.(怎么给我感觉这么想vue,avalon那些插值表达式嘞)在以前,我们想把字符串连接起来,用的是+号连接,比如:
-var name">
-<meta property="og:type" content="article">
-<meta property="og:title" content="了解es6时踩的坑">
-<meta property="og:url" content="http://yoursite.com/2016/10/07/了解es6时踩的坑/index.html">
+  <meta name="description" content="记录工作生活点点滴滴">
+<meta property="og:type" content="website">
+<meta property="og:title" content="xiebingcheng的博客(每天进步一点点)">
+<meta property="og:url" content="http://yoursite.com/tags/html/index.html">
 <meta property="og:site_name" content="xiebingcheng的博客(每天进步一点点)">
-<meta property="og:description" content="今天虽然是国庆放假最后一天,还是闲来无聊,干脆去了解一下javascript的es6. 
-结果差一点掉坑里爬不上来了.想着还是记录一下坑的位置,避免以后还会出现.好记性不如烂笔头嘛.
-好了,事情是这样子的
-我在学习es6时,看到es6推出一个模板字符串,用${}弄起来.(怎么给我感觉这么想vue,avalon那些插值表达式嘞)在以前,我们想把字符串连接起来,用的是+号连接,比如:
-var name">
-<meta property="og:updated_time" content="2016-12-07T14:35:12.545Z">
+<meta property="og:description" content="记录工作生活点点滴滴">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="了解es6时踩的坑">
-<meta name="twitter:description" content="今天虽然是国庆放假最后一天,还是闲来无聊,干脆去了解一下javascript的es6. 
-结果差一点掉坑里爬不上来了.想着还是记录一下坑的位置,避免以后还会出现.好记性不如烂笔头嘛.
-好了,事情是这样子的
-我在学习es6时,看到es6推出一个模板字符串,用${}弄起来.(怎么给我感觉这么想vue,avalon那些插值表达式嘞)在以前,我们想把字符串连接起来,用的是+号连接,比如:
-var name">
+<meta name="twitter:title" content="xiebingcheng的博客(每天进步一点点)">
+<meta name="twitter:description" content="记录工作生活点点滴滴">
   
     <link rel="alternative" href="/atom.xml" title="xiebingcheng的博客(每天进步一点点)" type="application/atom+xml">
   
@@ -154,160 +141,54 @@ var name">
 </nav>
 
       <div class="body-wrap">
-        <article id="post-了解es6时踩的坑" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      了解es6时踩的坑
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/03/12/关于响应式网站的心得/" class="archive-article-date">
+  	<time datetime="2017-03-12T09:13:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-12</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/03/12/关于响应式网站的心得/">关于响应式网站的一些心得总结</a>
     </h1>
   
 
-        <a href="/2016/10/07/了解es6时踩的坑/" class="archive-article-date">
-  	<time datetime="2016-10-07T07:42:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-07</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天虽然是国庆放假最后一天,还是闲来无聊,干脆去了解一下javascript的es6. </p>
-<p>结果差一点掉坑里爬不上来了.想着还是记录一下坑的位置,避免以后还会出现.好记性不如烂笔头嘛.</p>
-<p>好了,事情是这样子的</p>
-<p>我在学习es6时,看到es6推出一个模板字符串,用${}弄起来.(怎么给我感觉这么想vue,avalon那些插值表达式嘞)<br>在以前,我们想把字符串连接起来,用的是+号连接,比如:</p>
-<pre><code>var name = &quot;学友&quot;;
-var message=&apos;我是&apos;+name+&apos;啊!&apos;;
-alert(message); //我是学友啊!
-</code></pre><p>这样用+号,如果是很多个变量都需要连接的话,就会非常的麻烦,而且前端也不好去维护对吧.<br>es6新增加了一种模板字符串的方法.</p>
-<pre><code>var name=&apos;学友&apos;;
-var message=`我是${name}啊!`
-alert(message); //我是学友啊!
-</code></pre><blockquote>
-<p>用这个方法是不是感觉会好那么一丢丢?</p>
-</blockquote>
-<p>那么,坑来了,请注意message变量的那个类似引号的东西, 我刚开始以为是引号,然后浏览器一直报错,刚开始我以为是浏览器可能不支持es6,我于是把谷歌浏览器更新了一遍,结果还是报错..</p>
-<blockquote>
-<p>顿时感觉好无助, 然后默默的点燃一根烟,突然发现,例子上的``好像不想是引号.  才发现,原来这个是tab键上面的那个键的符号(一下子我不知道这个符号是叫什么..).</p>
-</blockquote>
-<p>我的天..  (不过还是得怪我没弄清楚,今天记录下来,以后免得忘记了..)</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/踩坑/">踩坑</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/响应式/">响应式</a></li></ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        <div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode"></div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2016/10/22/css居中的几种方法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          css居中的几种方法
-        
-      </div>
-    </a>
   
   
-    <a href="/2016/10/06/oneblog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">终于看到你&quot;Hello World!&quot;</div>
-      <i class="icon-circle-right"></i>
-    </a>
+    </div></section>
   
-</nav>
 
-
-
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="了解es6时踩的坑" data-title="了解es6时踩的坑" data-url="http://yoursite.com/2016/10/07/了解es6时踩的坑/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"xiebingcheng"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
-
+    
 
 
       </div>
@@ -329,9 +210,9 @@ alert(message); //我是学友啊!
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

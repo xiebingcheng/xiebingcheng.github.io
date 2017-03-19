@@ -143,6 +143,203 @@
       <div class="body-wrap">
         
   
+    <article id="post-关于响应式网站的心得" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/12/关于响应式网站的心得/">关于响应式网站的一些心得总结</a>
+    </h1>
+  
+
+        <a href="/2017/03/12/关于响应式网站的心得/" class="archive-article-date">
+  	<time datetime="2017-03-12T09:13:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-12</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##写在前面的话</p>
+<p>以前的我,在学html,css的时候总感觉这些好简单,没有什么必要下太多的时间和功夫死磕在这里,但是当我后来在实际写页面中,就感觉出了力不从心,这些东西就是这样,就像女票,男票一样,你不理她她就不理你,你在她身上花的时间越多,她就会对你越好越温柔..(md,什么鬼,不是说写响应式网站的嘛?结果裤子都脱了,你却让我看这个?)</p>
+<p>哈哈,感悟不多说啦,下面是一些生活工作上的关于写页面的心得(响应式),那就直接进入正题了.</p>
+<p>在移动端迅猛发展的今天,pc和移动端的兼容是迫在眉睫.这个时候,响应式技术迎来了春天.</p>
+<p>不用说大家都知道,响应式网站无论对于ui还是前端的工作都是大大的减轻,<br>为什么这么说呢,<br>1.因为,只需要一份代码,就能实现移动pc的兼容,多出的工作量,只是css的一些样式改动(好过重新去写一份写的css啊),和一些js的工作量.<br>2.节省时间,可以做更多的事.<br>3.每个设备都能得到正确的设计;<br>4.搜索优化,google已经提出对响应式网站的搜索和优化,爬虫可以更加有效的搜索到网站的内容了.<br>5.兼容各种手机平板pc.  </p>
+<p>哎呀,不列举响应式的好了(我承认是我懒得再去网上抄这些优点了..),反正一句话,就是好!(当然,也有不好的一面,比如当公司要求支持低版本的IE系列时..)</p>
+<p>但是我不得不说一下,实现响应式网站的技术,重要的是媒体查询.弹性图片和弹性网格布局..</p>
+<p>##响应式网站的开发:</p>
+<p>###关于优雅降级还是渐渐增强:</p>
+<p>我的选择会选择优雅降级.虽然说,我们的共识是,一个东西先完善他们的功能才接下来完善他们的颜值,确实没错,这个理论.但是,要就事论事,我真的无法想象写一个网站,先在老旧的IE上写,完善他们的功能,同时颜值丑的要死,然后在渐渐增强..这样或许有点反人类吧..哈哈,所以我还是选择优雅降级比较稳妥,况且先在浏览器发展的这么快,时代在进步,用老旧浏览器的人实在很少很少了..</p>
+<p>关于做响应式网站,是先做小屏幕先的还是大屏幕呢?</p>
+<p>我原来是有点纠结这个问题的,但是呢,其实这个也不是个什么大问题,其实都可以啦,但是最好先选择目标用户多的人群,比如电商网站,先做小屏幕,因为现在用移动端购买电商上的东西在持续增加,又如P2P类的金融产品网站,最好还是先做pc端大屏幕先,因为pc端人数会多一些.</p>
+<p>###关于媒体查询断点的选择:</p>
+<p>这个我以前踩过坑,我要好好记录一下.不要选择按照设备型号来选择断点,比如:</p>
+<pre><code>@media only screen   //iPhone4 and 4S
+  and (min-device-width:320px)
+  and (min-device-width:480px)
+  and(-webkit-min-device-pixel-ratio:2){
+}
+</code></pre><p>这样的话,累死不说,估计想转后端了..哈哈.. 除非我们是打算针对特定的设备进行特定的优化,才用这样的断点,如果不是,就不要这样使用断点</p>
+<p>###断点的选择:</p>
+<p>通过屏幕大小的选择来选择断点,比如:</p>
+<p>0–480  小屏幕</p>
+<p>481–800 中屏幕</p>
+<p>801–1400 大屏幕</p>
+<p>1400以上 巨型屏幕</p>
+<p>不过,具体的断点选择,还是要靠产品和UI的理解和设计来选择断点,会更好的符合需求</p>
+<p>###用 img标签 还是用背景图片来引入图片?</p>
+<p>1.如果是必不可少的图片,比如一个logo图,要用img标签,因为太重要了,还可以加上alt属性来优化搜索爬虫.一举两得</p>
+<p>2.可有可无的图片,通过背景图片引入就行了.</p>
+<p>###顺便记录一下em和rem的区别,免得以后忘记..</p>
+<p>em是相对长度的单位</p>
+<p>em相对父元素的font-size<br>em有继承的效果<br>如果没有设置font-size,浏览器会有一个默认的em设置:1em=16px<br>用em的话,缺点就是比较混乱,因为他有继承,有点麻烦</p>
+<p>rem是相对html根元素的单位 </p>
+<p>浏览器默认的rem也是16px<br>缺点(随着时间推移,这个其实也不算缺点了):不是所有浏览器都兼容rem,在IE8及以下版本IE是不支持rem这个单位的.</p>
+<p>如果真心想在这个IE8下使用rem,可以用css hack写法(应该算兼容写法):</p>
+<pre><code>html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+P{
+    font-size:1rem;
+    font-size:10px
+}
+</code></pre><p>就是这样..</p>
+<p>###对,还有一个地方,我要记下来,以前坑我好久的..(中文最小为12px)</p>
+<p>就是如果设置好了html等于62.5%,这个时候1rem等于10px,但是如果这个时候拿这个rem来设置比如说 line-height:3rem 的话, 按道理应该是30px的行高,但是结果不是这样的, 是36px的行高, 因为chrome浏览器对中文有一个最小的设置是12px,所以关于中文这些的rem设置会有一点误差,实在要求精确,就用px来设置.</p>
+<p>###又想起了一个,就是坑,就是用ul , li的话,多个li在一起,必然要换行,这样的代码我们也好书写和后期管理,但是这样会出现一个空白符,这个的存在会影响布局的精准性..</p>
+<p>解决方法:</p>
+<pre><code>1.&lt;li&gt;&lt;/li&gt;直接不写后面的闭合标签(浏览器会自动帮我们加上,这样就不会有空白符出现了) 
+
+2.在li加上样式 margin-left: -3px;
+</code></pre><p>###关于透明的使用</p>
+<p>1.当要求背景透明,但是内容不要求透明,则 </p>
+<pre><code>background-color: rgba(255, 255, 255, 0.8);  //0最后面的值为透明度
+</code></pre><p>2.当要求,一起透明的情况 opacity:0.8,(ie用filter:Alpha(opacity=80));</p>
+<p>###当前面这些坑,避免了以后,就可以开始动手写响应式了,流程如下:</p>
+<p>1.创建工程文件夹<br>    基本的目录结构<br>    src //主文件夹</p>
+<pre><code>css //样式表文件夹
+js //Javascript文件夹
+img //图片文件夹
+tpl //模板文件夹
+swf //Flash文件
+less //动态样式表，或者sass
+doc //文档文件夹
+</code></pre><p>js文件夹里<br>    vendor //引用的库的文件夹</p>
+<p>src文件夹下还有</p>
+<pre><code>robots.txt //给爬虫看的,让爬虫知道什么该爬什么不该爬.
+</code></pre><p>####开始建站</p>
+<pre><code>html lang=&quot;zh-CN&quot; //声明这是简体中文网站
+&lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;  &lt;!--要求IE用最新的edge可用的模式渲染这个html--&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=deviece-width,initial-scale=1&quot;&gt; &lt;!--设置viewport的视口的比例,初始缩放比例为1--&gt;
+</code></pre><p>然后先写好html(个人习惯),基本大纲结构如下(以前我不太注重这些什么结构,但是后来我发现,结构写的好有助于seo的优化,爬虫更好的抓取,还有比如一些盲人朋友,使用阅读器阅读我们的网站时,更加有助于机器识别内容等等,所以,还是必须要把结构弄好的!),<a href="https://gsnedders.html5.org/" target="_blank" rel="external">查看html大纲的网站,</a>如下:</p>
+<pre><code>head
+ meta
+ meta
+ title
+ meta
+ link //引用的css等
+ link
+ link
+body
+ header //使用h5新标签,对IE8及以下不兼容,使用html5shiv库,让兼容
+  nav
+ div.container //主体
+  section
+  section 
+  section
+ footer  //网页最底部
+  ul
+  p
+</code></pre><p>这就是大体的html大纲结构,接下来到css<br>关于css,肯定要引入一个重置样式,因为每个浏览器的定义不一样嘛.以前都是用 reset.css 这个重置的css,但是太暴力了,对待这些元素,而且非常让我不爽的是,一打开chrome的F12,然后一堆样式在里面,感觉看的好难看.最近新发现了一个重置的样式–normalize.css 这个感觉更加的友好,对元素来说,没这么暴力. 所以决定用它了.</p>
+<p><a href="http://necolas.github.io/normalize.css/" target="_blank" rel="external">normalize.css网址</a></p>
+<pre><code>html {
+font-size: 62.5%; /* 1rem = 10px */
+color: #222;
+}
+</code></pre><p>设置了上面的样式后,让rem好计算一点..</p>
+<p>然后写完自定义的页面css后,就开始写媒体查询了:</p>
+<pre><code>@media only screen and (max-width: 50em) { //800
+/*这里的rem的值不是通过html的字体大小来换算的,而是通过浏览器默认的值大小来换算的 也就是1rem = 16px,em也是一样的换算方法*/
+
+}
+
+@media only screen and (min-width: 30.0625em)and (max-width: 50em) { //481 -- 800 
+
+}
+
+@media only screen and (max-width: 30em) {  //480
+
+}
+</code></pre><p>这个就是响应式的样式,就姑且把它的断点分成0-480, 481-800, 800以上.</p>
+<p>####响应式图片</p>
+<p>写完兼容屏幕大小的css后,最重要的应该就是图片的了,图片也需要写响应式的,要不然一张图片很大,在移动端怎么看?一张图片很小,在pc大屏幕上怎么看?这里主要说的是轮播图的图片.</p>
+<p>实现相应式图片的方法,</p>
+<p>1.用js代码实现:</p>
+<pre><code>$(document).ready(function(){
+  function makeImageResponsive(){
+      var width = $(window).width();
+      var img = $(&quot;.content img&quot;);
+      if(width&lt;= 480){
+        img.attr(&apos;src&apos;,img/480.png);
+    }else if(width&lt;=800){
+        img.attr(&apos;src&apos;,img/800.png);
+     }else { 
+        img.attr(&quot;src&quot;,img/1600.png)
+    }
+   }
+   $(window).on(&quot;resize load&quot; , makeImageResponsive);
+})
+</code></pre><p>2.img的属性实现:</p>
+<pre><code>&lt;img class=&apos;img&apos; src=&quot;img/480.png&quot; srcset=&quot;img/480.png 480w, srcset=&quot;img/800.png 800w, srcset=&quot;img/1600.png 1600w&quot; sizes=&quot;100vw&quot;&gt; //sizes是设置视口的宽度,如果定义图片显示50%,那视口设置为50vw即可.
+</code></pre><p>3.用html5的picture标签</p>
+<pre><code>&lt;picture&gt;
+&lt;source srcset=&quot;img/ad001-l.png&quot; media=&quot;(min-width:50em)&quot;&gt;
+&lt;source srcset=&quot;img/ad001-m.png&quot; media=&quot;(min-width:30em)&quot;&gt;
+&lt;img src=&quot;img/ad001.png&quot; alt=&quot;年度报告&quot;&gt;
+&lt;/picture&gt;
+</code></pre><p>第三个方法比第二种更加能精确点的控制浏览器对图片的选用,而且可以支持横屏的时候的使用.<br>虽然这个新的picture标签还有很多的老版本浏览器不兼容,但是可以通过一个库来解决这个问题,就是<a href="http://scottjehl.github.io/picturefill/" target="_blank" rel="external">picturefill.js</a><br>当然,就算用了这个库,但是在IE9下,还是无法识别这个picture标签,又要hack一下css的写法,用video标签即可代替,比如:</p>
+<pre><code>&lt;picture&gt; &lt;!--[if IE 9]&gt;&lt;videostyle=&quot;display:none;&quot;&gt;&lt;![endif]--&gt;
+ &lt;source srcset=&quot;smaller.jpg&quot; media=&quot;(max-width: 768px)&quot;&gt; &lt;source srcset=&quot;default.jpg&quot;&gt; &lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt; 
+&lt;img srcset=&quot;default.jpg&quot; alt=&quot;My default image&quot;&gt; 
+&lt;/picture&gt;
+</code></pre><p>详见大漠博客的<a href="https://www.w3cplus.com/html5/quick-tip-how-to-use-html5-picture-for-responsive-images.html" target="_blank" rel="external">如何使用 HTML5 的picture元素处理响应式图片</a></p>
+<p>到此,基本搞定响应式开发的大概步骤了,剩下的就需要去各个浏览器去调试一下有什么bug即可..</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/响应式/">响应式</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/12/关于响应式网站的心得/#more">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-重新安装hexo博客的坑" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -294,87 +491,6 @@ git config --global user.email &quot;YOUR EMAIL ADDRESS&quot;
 
 
   
-    <article id="post-用nodejs的管理工具nvm遇见的坑" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/18/用nodejs的管理工具nvm遇见的坑/">用nodejs管理工具nvm遇见的坑</a>
-    </h1>
-  
-
-        <a href="/2017/01/18/用nodejs的管理工具nvm遇见的坑/" class="archive-article-date">
-  	<time datetime="2017-01-18T14:20:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-18</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>用nvm管理的几个nodejs版本,其中只有第一个下载的node版本的npm能使用,剩下的都不能使用!<br>我很纳闷,因为这样的话,除了能使用的那个node,剩下的根本都不能npm,那这个nodejs版本还有什么用.我越想越觉得不对,肯定是什么地方出错了,才会导致这样的结果..</p>
-<p>踩坑之旅开始了</p>
-<p>事情是这样的,因为项目不同,有时候要用的node版本也不同.然后我百度知道了一个nodejs的管理工具叫nvm,<a href="http://dajyaretakuya.blog.51cto.com/2823475/1760255/" target="_blank" rel="external">贴上一个大神的博客.</a><br>我用的是windows版本的nvm.版本号是1.1.1</p>
-<p>然后一个巨大的坑出现了,我第一次用这个nvm. 刚刚开始安装的很顺利,就是下载nvm有点难下载,速度很慢. 然后安装基本无压力,nvm会自动的帮你把环境变量配置好,当然,也可以自己配置,因为有时候想要它的文件地址掌控在自己的手中.<br>环境变量配置:</p>
-<pre><code>NVM_HOME = C:\nvm  //新建这两个变量
-NVM_SYMLINK = C:\nodejs 
-Path = %NVM_HOME%;%NVM_SYMLINK%  //这个是直接配置在系统的path里面的.
-</code></pre><p>弄好nvm后,通过命令下载nodejs</p>
-<pre><code>nvm install 版本号
-</code></pre><p>然后我下载的第一个node一切正常,npm什么的正常使用.<br>但是当我的下载的第二个第三个node的时候,发现npm根本不能使用.</p>
-<p>发现这个问题后,我百度,google了很久,看了许多博文,发现他们的方法不太适合我这个问题.我也配置了无数遍的环境变量,结果还是不行.基本上方法都用了一遍,这个问题就是不能解决.</p>
-<p>到了后面,我看到一篇博文的<a href="http://blog.csdn.net/stopcpp/article/details/53909558" target="_blank" rel="external">关于npm安装和环境变量的配置</a>给了我点启发,他把npm的包,放到了他新建的nvm文件夹里.<br>我就在想,npm包的事,结果我发现,除了第一个安装的node里面的node_modules是有npm这个文件,剩下的都是空的,我想,这个应该就是问题的所在了吧.<br>然后我试了试,把第一个成功的node版本的node_modules文件夹里的npm文直接复制到另一个版本的node_modules文件夹里面.结果奇迹出现了,切换到这个版本的node后,输入命令 npm -v 发现有输出版本号了. </p>
-<p>到此,问题解决了.</p>
-<p>但是还有更坑的是什么,我还是不甘心,又试了一下nvm,我把一些不能用npm的node直接从文件夹中删除.然后又重新通过命令 nvm install 版本号 下载这个node版本, 发现这个node的npm有了! </p>
-<p>对,你没听错, 有了!</p>
-<p>我只想说,兄弟,不带这么玩的吧..</p>
-<p>对了,还有个情况就是,npm下载东西,因为服务器在国外,速度很慢,甚至下载不成功.所以要通过国内的镜像服务器来下载, 比如 淘宝的 和 cnpm</p>
-<p>这里,还有一个叫nrm的东西,很好用,就是专门处理这个情况的.</p>
-<p>nrm的用法是:</p>
-<pre><code>npm install -g nrm //全局下载安装这个nrm 
-</code></pre><p>列出所有可以用的npm的镜像源地址</p>
-<pre><code>nrm ls //安装后可以使用这个命令
-</code></pre><p>然后,想用哪个镜像源,就用哪个,国内肯定是cnpm和淘宝(淘宝10分钟同步国外的npm库一次,cnpm15分钟同步一次)的啦.</p>
-<pre><code>nrm use cnpm //使用cnpm这个镜像源下网络载nodejs的库.提升网速度
-</code></pre><p>测试每个镜像源的链接速度</p>
-<pre><code>nrm test //测试速度,一般淘宝的最快
-</code></pre><p>好啦,这个工具我感觉挺好用的,特别是下载库的时候速度太慢,可以切换镜像源,用这个nrm最方便.连地址你都可以不用百度了,直接用nrm帮你换地址就成了.</p>
-<p>记得,一定要加 -g 全局安装 nrm 让其他版本的nodejs都能用,所以记得,我觉得不仅仅是nrm要全局安装,其实如果用这个nvm管理多个node的话,其他的node也要用库,全局安装就不用这么麻烦,每个都要下载一遍,直接全局安装就行.</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nvm/">nvm</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/18/用nodejs的管理工具nvm遇见的坑/#more">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-开发微信公众号遇见的坑" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -440,6 +556,87 @@ npm install -g react-native-cli #安装 react-native-cli 模块至全局目录�
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/01/18/开发微信公众号遇见的坑/#more">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-用nodejs的管理工具nvm遇见的坑" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/18/用nodejs的管理工具nvm遇见的坑/">用nodejs管理工具nvm遇见的坑</a>
+    </h1>
+  
+
+        <a href="/2017/01/18/用nodejs的管理工具nvm遇见的坑/" class="archive-article-date">
+  	<time datetime="2017-01-18T14:20:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-18</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>用nvm管理的几个nodejs版本,其中只有第一个下载的node版本的npm能使用,剩下的都不能使用!<br>我很纳闷,因为这样的话,除了能使用的那个node,剩下的根本都不能npm,那这个nodejs版本还有什么用.我越想越觉得不对,肯定是什么地方出错了,才会导致这样的结果..</p>
+<p>踩坑之旅开始了</p>
+<p>事情是这样的,因为项目不同,有时候要用的node版本也不同.然后我百度知道了一个nodejs的管理工具叫nvm,<a href="http://dajyaretakuya.blog.51cto.com/2823475/1760255/" target="_blank" rel="external">贴上一个大神的博客.</a><br>我用的是windows版本的nvm.版本号是1.1.1</p>
+<p>然后一个巨大的坑出现了,我第一次用这个nvm. 刚刚开始安装的很顺利,就是下载nvm有点难下载,速度很慢. 然后安装基本无压力,nvm会自动的帮你把环境变量配置好,当然,也可以自己配置,因为有时候想要它的文件地址掌控在自己的手中.<br>环境变量配置:</p>
+<pre><code>NVM_HOME = C:\nvm  //新建这两个变量
+NVM_SYMLINK = C:\nodejs 
+Path = %NVM_HOME%;%NVM_SYMLINK%  //这个是直接配置在系统的path里面的.
+</code></pre><p>弄好nvm后,通过命令下载nodejs</p>
+<pre><code>nvm install 版本号
+</code></pre><p>然后我下载的第一个node一切正常,npm什么的正常使用.<br>但是当我的下载的第二个第三个node的时候,发现npm根本不能使用.</p>
+<p>发现这个问题后,我百度,google了很久,看了许多博文,发现他们的方法不太适合我这个问题.我也配置了无数遍的环境变量,结果还是不行.基本上方法都用了一遍,这个问题就是不能解决.</p>
+<p>到了后面,我看到一篇博文的<a href="http://blog.csdn.net/stopcpp/article/details/53909558" target="_blank" rel="external">关于npm安装和环境变量的配置</a>给了我点启发,他把npm的包,放到了他新建的nvm文件夹里.<br>我就在想,npm包的事,结果我发现,除了第一个安装的node里面的node_modules是有npm这个文件,剩下的都是空的,我想,这个应该就是问题的所在了吧.<br>然后我试了试,把第一个成功的node版本的node_modules文件夹里的npm文直接复制到另一个版本的node_modules文件夹里面.结果奇迹出现了,切换到这个版本的node后,输入命令 npm -v 发现有输出版本号了. </p>
+<p>到此,问题解决了.</p>
+<p>但是还有更坑的是什么,我还是不甘心,又试了一下nvm,我把一些不能用npm的node直接从文件夹中删除.然后又重新通过命令 nvm install 版本号 下载这个node版本, 发现这个node的npm有了! </p>
+<p>对,你没听错, 有了!</p>
+<p>我只想说,兄弟,不带这么玩的吧..</p>
+<p>对了,还有个情况就是,npm下载东西,因为服务器在国外,速度很慢,甚至下载不成功.所以要通过国内的镜像服务器来下载, 比如 淘宝的 和 cnpm</p>
+<p>这里,还有一个叫nrm的东西,很好用,就是专门处理这个情况的.</p>
+<p>nrm的用法是:</p>
+<pre><code>npm install -g nrm //全局下载安装这个nrm 
+</code></pre><p>列出所有可以用的npm的镜像源地址</p>
+<pre><code>nrm ls //安装后可以使用这个命令
+</code></pre><p>然后,想用哪个镜像源,就用哪个,国内肯定是cnpm和淘宝(淘宝10分钟同步国外的npm库一次,cnpm15分钟同步一次)的啦.</p>
+<pre><code>nrm use cnpm //使用cnpm这个镜像源下网络载nodejs的库.提升网速度
+</code></pre><p>测试每个镜像源的链接速度</p>
+<pre><code>nrm test //测试速度,一般淘宝的最快
+</code></pre><p>好啦,这个工具我感觉挺好用的,特别是下载库的时候速度太慢,可以切换镜像源,用这个nrm最方便.连地址你都可以不用百度了,直接用nrm帮你换地址就成了.</p>
+<p>记得,一定要加 -g 全局安装 nrm 让其他版本的nodejs都能用,所以记得,我觉得不仅仅是nrm要全局安装,其实如果用这个nvm管理多个node的话,其他的node也要用库,全局安装就不用这么麻烦,每个都要下载一遍,直接全局安装就行.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nvm/">nvm</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/18/用nodejs的管理工具nvm遇见的坑/#more">展开全文 >></a>
         </p>
       
 
@@ -786,85 +983,6 @@ npm install -g react-native-cli #安装 react-native-cli 模块至全局目录�
 
 
   
-    <article id="post-关于以色列建国的感悟" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/24/关于以色列建国的感悟/">关于以色列建国的感悟</a>
-    </h1>
-  
-
-        <a href="/2016/12/24/关于以色列建国的感悟/" class="archive-article-date">
-  	<time datetime="2016-12-23T16:04:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-24</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>以前学历史的时候,我记得在二战的时候,中国政府在上海收留和帮助了很多的犹太人,然后战争结束犹太人很感激,据说后来中国的歼十战机师承以色列的幼狮战机,有很多幼狮战机的技术在里面.</p>
-<p>另一头我又听历史老师讲,以色列和巴勒斯坦一直在打仗,那个地方很不和平,以色列犹太人说这个地方以前是他们的,巴勒斯坦也说我们祖祖辈辈都生活在这里,这个地方是我们的.</p>
-<p>然后,印象中好像中东地区一直都是阿拉伯人的,祖祖辈辈都生活在那里.<br>顿时,一个可怕的”担忧”,浮现在我脑海,如果那个时候,二战中国政府收留的犹太人,过后说上海是他们的怎么办?</p>
-<p>但是转念一想,犹太人其实挺好的,最少他们懂得感恩,在西方世界关于这些武器等技术限制对华出口,但是犹太人还是帮了我们. 所以我知道,我刚刚的担忧是有点杞人忧天的了.</p>
-<p>但是,怎么想都感觉不太对,关于这些,有些东西感觉在我脑袋里扣不成一条完整的绳子.比如,为什么巴勒斯坦和以色列都说这个地方是他们的?这个地方沙漠一片片的,以色列人还花了这么多钱和精力去治理这些沙漠,而且犹太人也是一个很会经商的民族,周围这么多和他们犹太人不和的民族在旁边,这个再怎么算,都是赔本的买卖,以色列人不会不知道,但是他们为什么还当宝,还要坚守在这?</p>
-<p>然后这段时间,了解了一下这段关于犹太人的历史,不了解不知道,一了解吓一跳,让我更加佩服!</p>
-<p>犹太人说这块地方原来是他们的,确实是,公元135年之前,他们一直在这里生活,然后古罗马的皇帝哈德良,把犹太人赶走,还规定,犹太人永远不能回来或者接近这里,接近就是死刑,而且还给这片地方改名,叫做巴勒斯坦,据说这是犹太人死敌非利士人的拉丁文中的同音.就是在拉丁文中非利士人和巴勒斯坦是同音.<br>而且在这公元135年之前,被赶走了两次,犹太人都又跑回来复国了,只是这次时间久了点,从被赶走到现在复国隔了近两千年.</p>
-<p>隔了进两千年,还能复国!?  这什么概念?</p>
-<p>而且犹太人在我的印象中是非常牛的一个民族,别的不说太多,光爱因斯坦是犹太人,都可以证明他们的牛.但是这个民族也是一个很惨的民族,二战被德国差点灭族不说,其实我看到有关资料,他们在公元135年被赶出自己的地盘来,就命运非常的惨,去到欧洲各国,都是被压迫,被压榨.我还记得,犹太人惨到什么地步,在中央电视台看过一档节目说的是二战的时候,德国纳粹迫害犹太人后,把他们的人皮,做成台灯和书皮.惨到这样的地步..</p>
-<p>而且还有一个阻力,他们想复国的地方,有一座城市,耶路撒冷,是三大教的圣城,犹太人离开的这段时间.两大教已经打的不可开交了,现在一个被欺负了千年的民族想回来这个地方建国?不仅在当时,到现在也是感觉是一件不可思议的事.<br>而且居然还真给犹太人做到了..真是厉害!</p>
-<p>不过我感觉我前面说了好多的废话,好吧,那直接进入正题,以色列建国的感悟,要说到感悟,要得先了解犹太人是怎么建国的,才能会有感悟.</p>
-<p>据资料记载,最先提出犹太人建国主义理论的是一个叫 摩西’赫斯,据说这个人还是共产主义的先驱比马克思,恩格斯还要先.但是这个人对关于犹太人复国只是提出一个理论,真正实施的是一个叫赫茨尔的犹太人,他是个很有执行力,马上就去做了.<br>赫茨尔先找到当时犹太人中富可敌国的而且又很有民族感的犹太人,找了其中两位,但是,那两位都觉得这些都不太可能实现,首先当时的巴勒斯坦在奥斯曼土耳其帝国的手里,那可是一个主权国家,当时犹太人只是有钱,但是没有军队,怎么和奥斯曼拿这片地方?其次,就算奥斯曼同意分巴勒斯坦给犹太人的话,要建立一个国家,也是需要很多钱的,虽然犹太人有一部分确实很有钱,但是对于建立一个国家来讲,那些钱几乎微不足道.为什么,就像当时赫茨尔像富豪提出的建国预算大概是十亿马克!这是什么概念,在当时的经济情况下,第二次提出六千万美金,依然还是拿不出来.<br>到了这里,赫茨尔知道,找富豪是不太可能完成这项任务的了,他直接跑去和当时的列强英国说,英国也很为难,说巴勒斯坦不在英国人的手里,怎么帮他们?要不找其他的地方?然后赫茨尔想了想,确实也是,这个道理,然后提出了,什么塞浦路斯,西奈半岛,乌干达,甚至当时的日本侵略我们东北,还说干脆划分哈尔滨附近的一片地方给犹太人建国算了(这样也想的出来..)然后,犹太人专门开了一个会议,专门讨论复国的事,当把这些提议去乌干达的建国的想法提出来时(当时他和英国人讨论了好久,干脆去乌干达算了.),遭到了大会的极高票反对,甚至说派一个考察团去乌干达看看也是高票反对不通过.大会上的犹太人说,要复国就去老祖宗留下来的巴勒斯坦那里复国. 这下英国人说,帮不了他们了巴勒斯坦又不在他们的管辖下,给他们出了这么多方案又没人通过.英国人说不管了.没办法,赫茨尔因此去找了德国人,德国人当时刚刚上台的皇帝叫威廉二世.威廉二世本来是答应了,为犹太人出头,然后他上台的第二年就出访奥斯曼土耳其,结果看到奥斯曼这个国家也不错,为什么要和他们交恶?接下来,在奥斯曼土耳其访问中,做了很多友好的动作.赫茨尔一看完蛋了.德国这边也没希望了.赫茨尔这一代犹太人的希望基本没了,因为该找该求的人都求遍了,有钱,有势的都不帮忙.最后赫茨尔死于1904年,这可以分为犹太人复国的第一阶段的结束.</p>
-<p>第二阶段的犹太人复国,交到了一个名字叫魏茨曼的犹太人的手中.为什么交给他,因为他是一名化学高手,当时正在打仗,第一次世界大战,火药是战争的必需品,然后当时火药的生产需要一个叫丙酮的东西,可是在魏茨曼之前,生产丙酮的工艺很差,然后魏茨曼发明了一种方法可以快速大量安全有效的生产丙酮,这就帮了英国的大忙,因为在打仗.然后可以说是,魏茨曼和英国人做交换,我把这些技术给你们,你们支持我们犹太人去复国.然后英国人说,没问题,紧接着以私人信件的形式发表了,一个叫’贝尔福宣言’.表达了在不损害当地人的利益的情况下,支持犹太人去那里建国.<br>虽然是私人信件的形式发表的,但是也终于有一个国际大国愿意支持犹太人复国了.<br>大家可能会想,一个小小的丙酮这么厉害,可以和别人换来一个国家..<br>其实,也根本不太可能嘛,别人怎么可能会因为这么一个配方给你一个国家来交换?毕竟复国这是非常大的事.<br>在网上看到,有评论说是因为,当时奥斯曼土耳其加入了德国的阵营在第一次世界大战中,然后英国是对德国宣战的,所以属于敌对国,既然是这样,英国人帮犹太人支持他们去这个奥斯曼土耳其的地方建国,当然是随便的事,因为这个不是他们的地方,而是敌对国的地方,你随便去.<br>但是也是巧合吧,历史总是会这样,一战奥斯曼土耳其战败,结果巴勒斯坦给英国人暂管.犹太人因为有之前的’贝尔福宣言’,看到了希望,开始大批大批的移民来到巴勒斯坦,然后,在当地的阿拉伯人很看不惯犹太人,因为犹太人聪明而且有钱,很快阿拉伯人就和他们闹矛盾.搞得英国焦头烂额,后悔死了,放犹太人过来,然后犹太人,又恨英国人放的犹太人不够多,又和英国搞破坏.<br>然后,这时的英国已经里外不是人了,因为犹太人恨他,阿拉伯人也讨厌英国人为什么放这些犹太人过来这里. 这时候的犹太人,还没说成功的复国了.以色列真正成立是在二战结束的时候,成立.</p>
-<p>那么为什么,到了二战以色列就能成立了呢?</p>
-<p>这是因为当时,二战的时候,美国在一战发了战争财,成为一个新崛起的大国,苏联也是另一个大国,不是英国一家说的算了.所有,犹太人建国,还得让这两大国支持才行.</p>
-<p>话分两头说,先说美国为什么支持犹太人复国,首先,美国的社会名流中,很多都是犹太人.这是第一点,然后还有一个事件.叫做 “圣路易斯号事件”,当时很多受德国纳粹迫害的犹太人乘坐圣路易斯号轮船要强行登陆美国,然后美国海关不给,说没合法手续,不允许,叫他们全部返航,结果没办法,这首轮船返航的途中,被德国潜艇炸沉.结果这事在美国引起了轩然大波,很多在美国的犹太人的民族情绪被点燃,然后随着杜鲁门总统上台,美国明确支持犹太人复国. </p>
-<p>然后,苏联,苏联前身是沙皇俄国,当时的俄国也是迫害犹太人比较厉害的一个国家.然后苏联建立,苏共的第一届政治局,一共24个人,其中16个是犹太人.但是后面各种原因,斯大林肃清犹太人,所以苏联又走上了反对犹太人的道路.但是打完仗了,苏联觉得中东是他们的后院,现在有他们讨厌的英国人在那里,很不舒服,一看阿拉伯人是没有实力和英国人捣乱,但是犹太人是有这个实力,这是一点,第二点,前面我写到,共产主义犹太人甚至还是先驱,有很多犹太人受过共产主义的熏陶,苏联觉得会不会犹太人自己建国了,会建立一个共产主义的国家?和他们苏联意识形态一样,或者说相近?所以在1947年苏联人发表了演说,支持犹太人建国.</p>
-<p>这时候,美国和苏联都搞定了,然后英国一看这两个大国都支持了,而且英国在这里被阿拉伯人和犹太人捣乱搞得很心烦,英国人也是不会做这样赔本的买卖.所以英国人就撤了.<br>紧接着,联合国大会通过决议,宣布巴勒斯坦分成两个国家,一个是阿拉伯人建立的国家,另一个是犹太人建立的国家–以色列.</p>
-<p>到这里,以色列建国的曲折故事,差不多就简单的交代完了.</p>
-<p>写到这里,这个故事给了我许多的感悟.</p>
-<blockquote>
-<p>1.万事还是得靠自身,看犹太人复国可以分为两个阶段,第一段,犹太人基本上是靠说服,或者请求帮助,或者是交换的方式,来获得一个国家.这怎么可能嘛? 世界上哪里有这么多的良心? 你说你很惨,受尽其他民族压迫,然后被赶走故土这么多年,想回来复国.确实是很惨,但是世界上也有其他民族也是这样惨的,为什么他们就没能复国了?<br>犹太人复国,看似好像世界各国的人民同情他们的遭遇,然后帮助他们,其实哪里是这个道理.犹太人没有这么出色,没有在苏联成立时,24个骨干成员,16个是犹太人,没有在美国社会上流这么多的犹太人,没有化学高手–魏茨曼,没有物理高手–爱因斯坦等等,这些牛人,能成功吗?犹太人虽然受尽迫害,但是他们依然顽强不息,依然能为人类的发展提供这么多的牛人和科学技术资料.他们犹太人民族虽然历尽苦难,但是从来没有被击垮.所以,不是犹太人取得了全世界人民的同情,相反,他们是取得了全世界人民的尊重.</p>
-<p>2.犹太人一直很坚定的相信他们一定能在巴勒斯坦这个地方复国,为什么?因为之前在公元135年之前他们也被赶出去,但是又回来复国,一共有两次.所以他们脑袋记忆深处一定相信,他们这次复国一定能成功.<br>这也让我想到了,我们中国,以前也很牛,唐朝,世界各地有唐人街,我也一直相信我们会复兴,再一次成为世界超级强国,我也有个愿望,我老司机一名,看到意大利是超跑故乡,而咱们中国在超跑这方面基本是0,我也想着把中国建设成一个世界一流电动超跑的故乡!我为什么相信我们能成功?因为我们之前在很多领域也是世界一流,所以我记忆深处也是有那种记忆,相信我们会做到.</p>
-<p>3.这点网上分析的,我觉得挺有道理.说的是,犹太人复国成功为什么? 其中有一点,成为他人的棋子,方可安身立命. 为什么这么说, 你看苏联本来是反对犹太人的,斯大林一生对犹太人都没什么好脸色.但是后面为什么支持? 其实可以从这个角度去说,当时英国在中东,苏联觉得很不舒服,然后只能靠犹太人去和英国捣乱,还有说不定犹太人建立的国家是共产主义的国家,说不定苏联又有了一个盟友,何乐而不为?其实美国也是,美国到现在都支持以色列.其中以色列这一独特的地缘位置,这一条特点,也是美国人支持以色列的一个原因.其实说白了,以色列如果不能主动的给大国博弈当他们的棋子,怎么能安身立命?毕竟犹太人一开始在复国这件事上可以算是一穷二白的地步..<br>我想了想,确实,拿这条道理在现实生活中,其实也一样受用,为什么这么说,其实打个不恰当的比喻,其实很多创业者就是其他人手中的棋子,对于投资人来说,你是他们赚钱的棋子,我把你这个棋子放在这个位置,这招虽然兵行险着,但是如果他搏对了这次走的棋,他的收获的利益可不是用手指头可以算的完的.在拿消费者来说,消费者也在把创业者当做棋子,为什么这么说.比如有两个类似的产品,消费者比对之后,决定用他不用你,等于把你这个棋子丢弃,保护另一个棋子.再比如拿支付宝来说,用户把支付宝当成一个棋子,当成了钱包,需要用钱的时候,才想到支付宝.其实支付宝不就等于是一个棋子了吗.话说到这里,其实反过来也一样,创业者一样把投资人和消费者当成了他们的手中的棋子.<br>慢慢想想,其实在人际关系中,不也是这样,互相把对方当成棋子.为什么?其实这是人性,这是人最原始的需求罢了.</p>
-<p>其实,关于这感悟还有一点,就是运气.如果犹太人没有赶在这一战和二战这段时间复国,在世界一篇和平.或者奥斯曼帝国很强大,和当时的英国一样,你想可能会复国成功吗? 这里面有很多的偶然因素.<br>不过,也不是这么悲观,假设当时的世界真的如我们假设是另一番景象,如果犹太人还是想着复国,一定还有另外的方法和机会等待他们,只是看他们能不能探索发现出来这些方法和机会.<br>就像易经里面说的.世界万物都是在变动的.阴和阳本身就是在运动的.那我们怎么办? 中国人有一个智慧,叫做以不变应万变.(这句话的意思,不是它字面上的意思.)其实,邓小平同志,把这句话进一步的封装了一下,叫做,摸着石头过河.  这个中国人的大智慧,实在是太好用了..</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/一些感悟/">一些感悟</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/24/关于以色列建国的感悟/#more">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -939,7 +1057,7 @@ var _hmt = _hmt || [];
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/2016/" style="font-size: 10px;">2016</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/get/" style="font-size: 10px;">get</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/js/" style="font-size: 17.5px;">js</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 12.5px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/一些感悟/" style="font-size: 10px;">一些感悟</a> <a href="/tags/人工智能/" style="font-size: 12.5px;">人工智能</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/定义/" style="font-size: 10px;">定义</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/新知/" style="font-size: 20px;">新知</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/杂谈/" style="font-size: 15px;">杂谈</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/网络请求/" style="font-size: 10px;">网络请求</a> <a href="/tags/美酒/" style="font-size: 12.5px;">美酒</a> <a href="/tags/踩坑/" style="font-size: 12.5px;">踩坑</a>
+    				<a href="/tags/2016/" style="font-size: 10px;">2016</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/css/" style="font-size: 12.5px;">css</a> <a href="/tags/get/" style="font-size: 10px;">get</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/js/" style="font-size: 17.5px;">js</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 12.5px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/一些感悟/" style="font-size: 10px;">一些感悟</a> <a href="/tags/人工智能/" style="font-size: 12.5px;">人工智能</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/响应式/" style="font-size: 10px;">响应式</a> <a href="/tags/定义/" style="font-size: 10px;">定义</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/新知/" style="font-size: 20px;">新知</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/杂谈/" style="font-size: 15px;">杂谈</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/网络请求/" style="font-size: 10px;">网络请求</a> <a href="/tags/美酒/" style="font-size: 12.5px;">美酒</a> <a href="/tags/踩坑/" style="font-size: 12.5px;">踩坑</a>
     			</div>
     	</section>
     
