@@ -143,6 +143,165 @@
       <div class="body-wrap">
         
   
+    <article id="post-ios下用jquery绑定点击事件无效" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/27/ios下用jquery绑定点击事件无效/">ios下用jquery绑定点击事件无效</a>
+    </h1>
+  
+
+        <a href="/2016/10/27/ios下用jquery绑定点击事件无效/" class="archive-article-date">
+  	<time datetime="2016-10-27T14:34:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-27</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天顺手就用div写了一个按钮.但是添加click事件无效..</p>
+<p>我很纳闷,因为我是用的jquery,然后这个是一个”动态添加的元素”,我用on()方法绑定这个click事件.</p>
+<p>在其他的平台,比如安卓什么的和模拟器上都是可以使用的.但是苹果手机下不行,后来,各种百度各种google才知道,ios下有这么一种设置,对于要点击的对象,拥有”小手”,那个样式.才可以被认为是可以使用点击事件的对象.</p>
+<p>这..(心中好不平静)</p>
+<p>最后我加上了这个样式</p>
+<pre><code>.div{
+    cursor:pointer
+}
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/踩坑/">踩坑</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/10/27/ios下用jquery绑定点击事件无效/#more">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-css居中的几种方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/22/css居中的几种方法/">css居中的几种方法</a>
+    </h1>
+  
+
+        <a href="/2016/10/22/css居中的几种方法/" class="archive-article-date">
+  	<time datetime="2016-10-21T16:06:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-22</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>以前在搜集了几种html样式居中的方法,参照了网络上各位大侠博主的博文,我现在也写一篇供以后的不时之需.</p>
+<h3 id="1-用margin-position来实现"><a href="#1-用margin-position来实现" class="headerlink" title="1.用margin+position来实现."></a>1.用margin+position来实现.</h3><p>总所周知啦,margin:0 auto 经常用来实现水平居中,但是如果是margin:auto,并不能实现居中.  但是如果加上posttion的话..</p>
+<pre><code>.center{
+margin:auto;
+posirion:absolute;
+top:0;left0;bottom:0;right:0;
+}
+</code></pre><p>大虾说,这种用法优点在于:</p>
+<p>1.支持跨浏览器，包括IE8-IE10.</p>
+<p>2.无需其他特殊标记，CSS代码量少</p>
+<p>3.支持百分比%属性值和min-/max-属性</p>
+<p>4.只用这一个类可实现任何内容块居中</p>
+<p>5.不论是否设置padding都可居中（在不使用box-sizing属性的前提下）</p>
+<p>6.内容块可以被重绘。</p>
+<p>7.完美支持图片居中。</p>
+<p>但是记住这样的方法,必须声明高度.</p>
+<h3 id="2-用绝对定位和负边距"><a href="#2-用绝对定位和负边距" class="headerlink" title="2.用绝对定位和负边距"></a>2.用绝对定位和负边距</h3><p>代码</p>
+<pre><code>.box3{position:relative;}
+.box3 span{
+           position: absolute;
+        width:100px;
+        height: 50px;
+        top:50%;
+        left:50%;
+        margin-left:-50px;
+        margin-top:-25px;
+        text-align: center;
+    }
+</code></pre><h3 id="3-通过-display-inline-block"><a href="#3-通过-display-inline-block" class="headerlink" title="3.通过 display:inline-block"></a>3.通过 display:inline-block</h3><pre><code>.box{
+    text-align:center;
+    font-size:0;
+}
+.box span{
+    vertical-align:middle;
+    display:inline-block;
+    font-size:16px;
+}
+.box:after{
+    content:&apos;&apos;;
+    width:0;
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+}
+</code></pre><p>after是用来占位的..</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/10/22/css居中的几种方法/#more">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-了解es6时踩的坑" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -348,7 +507,7 @@ var _hmt = _hmt || [];
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/2016/" style="font-size: 10px;">2016</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/css/" style="font-size: 12.5px;">css</a> <a href="/tags/get/" style="font-size: 10px;">get</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/js/" style="font-size: 17.5px;">js</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 12.5px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/一些感悟/" style="font-size: 10px;">一些感悟</a> <a href="/tags/人工智能/" style="font-size: 12.5px;">人工智能</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/响应式/" style="font-size: 10px;">响应式</a> <a href="/tags/定义/" style="font-size: 10px;">定义</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/新知/" style="font-size: 20px;">新知</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/杂谈/" style="font-size: 15px;">杂谈</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/网络请求/" style="font-size: 10px;">网络请求</a> <a href="/tags/美酒/" style="font-size: 12.5px;">美酒</a> <a href="/tags/踩坑/" style="font-size: 12.5px;">踩坑</a>
+    				<a href="/tags/2016/" style="font-size: 10px;">2016</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/aip/" style="font-size: 10px;">aip</a> <a href="/tags/css/" style="font-size: 12.5px;">css</a> <a href="/tags/get/" style="font-size: 10px;">get</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/js/" style="font-size: 17.5px;">js</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 12.5px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue2/" style="font-size: 10px;">vue2</a> <a href="/tags/一些感悟/" style="font-size: 10px;">一些感悟</a> <a href="/tags/人工智能/" style="font-size: 12.5px;">人工智能</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/响应式/" style="font-size: 10px;">响应式</a> <a href="/tags/定义/" style="font-size: 10px;">定义</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/新知/" style="font-size: 20px;">新知</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/杂谈/" style="font-size: 15px;">杂谈</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/网络请求/" style="font-size: 10px;">网络请求</a> <a href="/tags/美酒/" style="font-size: 12.5px;">美酒</a> <a href="/tags/踩坑/" style="font-size: 12.5px;">踩坑</a>
     			</div>
     	</section>
     
