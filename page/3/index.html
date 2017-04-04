@@ -143,77 +143,6 @@
       <div class="body-wrap">
         
   
-    <article id="post-移动端浏览器私有及meta" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/30/移动端浏览器私有及meta/">移动端浏览器私有及meta</a>
-    </h1>
-  
-
-        <a href="/2016/10/30/移动端浏览器私有及meta/" class="archive-article-date">
-  	<time datetime="2016-10-30T07:51:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-30</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>项目中的一些浏览器私有meta</p>
-<p>UC浏览器私有</p>
-<p>全屏模式</p>
-<pre><code>&lt;meta name=&quot;full-screen&quot; content=&quot;yes&quot;&gt;
-</code></pre><p>强制竖屏</p>
-<pre><code>&lt;meta name=&quot;screen-orientation&quot; content=&quot;portrait&quot;&gt;
-</code></pre><p>强制横屏</p>
-<pre><code>&lt;meta name=&quot;screen-orientation&quot; content=&quot;landscape&quot;&gt;
-</code></pre><p>应用模式</p>
-<pre><code>&lt;meta name=&quot;browsermode&quot; content=&quot;application&quot;&gt;
-</code></pre><p>其它</p>
-<p>针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓</p>
-<pre><code>&lt;meta name=&quot;HandheldFriendly&quot; content=&quot;true&quot;&gt;
-</code></pre><p>微软的老式浏览器</p>
-<pre><code>&lt;meta name=&quot;MobileOptimized&quot; content=&quot;320&quot;&gt;
-</code></pre><p>windows phone 点击无高光</p>
-<pre><code>&lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot;&gt;
-</code></pre><p>以后继续补充一些.</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/浏览器/">浏览器</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/10/30/移动端浏览器私有及meta/#more">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-ios下用jquery绑定点击事件无效" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -258,6 +187,92 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/10/27/ios下用jquery绑定点击事件无效/#more">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-webstorm的使用之路" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/25/webstorm的使用之路/">webstorm的使用之路</a>
+    </h1>
+  
+
+        <a href="/2016/10/25/webstorm的使用之路/" class="archive-article-date">
+  	<time datetime="2016-10-25T08:05:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-25</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>代码缩写补全:<br>div&gt;ul&gt;li*3 + tab键</p>
+<pre><code>&lt;div&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre><p>其中,不光是&gt;,还有 +(代表同级元素) ^(代表向上爬升一级) 还有挂号()</p>
+<p>挂号的用法: (header&gt;div&gt;ul&gt;li*3)+footer</p>
+<pre><code>&lt;header&gt;
+    &lt;div&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+&lt;footer&gt;&lt;/footer&gt;
+</code></pre><p>还有生成id # 类. 等等,<br>{} p{设有},就是</p><p>设有</p><p></p>
+<p>生成无意义的文字 lorem   lorem80生成80个无意义的文字  </p>
+<p>在css文件也可以用.</p>
+<p>以上是Emmet的语法</p>
+<p>webstorm快捷键</p>
+<p>多光标的选择:<br>快捷键 alt + 鼠标左键拖动 //相同列的情况下使用<br>非相同键的情况: alt + 鼠标左键想点哪里就哪里</p>
+<p>本地修改历史:<br>右键点击要查看的代码页面+local History 选择show History</p>
+<p>代码格式化: ctrl + alt +L</p>
+<p>代码行移动alt+shift+向上或者先下箭头</p>
+<p>跳转目标行：ctrl + g</p>
+<p>按着shift浮在图片上方可以看到图片的预览</p>
+<p>Shift + F6 重命名(变量,标签名等)</p>
+<p>我觉得最好用的一点是, webstorm有个大纲,可以查看html js的结构,大纲按钮在webstorm的左下角的那个类似电脑触摸板的图标,点击就会出现.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IDE/">IDE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webstorm/">webstorm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编辑器/">编辑器</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/10/25/webstorm的使用之路/#more">展开全文 >></a>
         </p>
       
 
@@ -578,7 +593,7 @@ var _hmt = _hmt || [];
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/2016/" style="font-size: 10px;">2016</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/aip/" style="font-size: 10px;">aip</a> <a href="/tags/css/" style="font-size: 12.5px;">css</a> <a href="/tags/get/" style="font-size: 10px;">get</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/js/" style="font-size: 17.5px;">js</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 12.5px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue2/" style="font-size: 10px;">vue2</a> <a href="/tags/一些感悟/" style="font-size: 10px;">一些感悟</a> <a href="/tags/人工智能/" style="font-size: 12.5px;">人工智能</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/响应式/" style="font-size: 10px;">响应式</a> <a href="/tags/定义/" style="font-size: 10px;">定义</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/新知/" style="font-size: 20px;">新知</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/杂谈/" style="font-size: 15px;">杂谈</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/网络请求/" style="font-size: 10px;">网络请求</a> <a href="/tags/美酒/" style="font-size: 12.5px;">美酒</a> <a href="/tags/踩坑/" style="font-size: 12.5px;">踩坑</a>
+    				<a href="/tags/2016/" style="font-size: 10px;">2016</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/aip/" style="font-size: 10px;">aip</a> <a href="/tags/css/" style="font-size: 12.5px;">css</a> <a href="/tags/get/" style="font-size: 10px;">get</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/js/" style="font-size: 17.5px;">js</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodejs/" style="font-size: 12.5px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/vue2/" style="font-size: 10px;">vue2</a> <a href="/tags/webstorm/" style="font-size: 10px;">webstorm</a> <a href="/tags/一些感悟/" style="font-size: 10px;">一些感悟</a> <a href="/tags/人工智能/" style="font-size: 12.5px;">人工智能</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/响应式/" style="font-size: 10px;">响应式</a> <a href="/tags/定义/" style="font-size: 10px;">定义</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/新知/" style="font-size: 20px;">新知</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/杂谈/" style="font-size: 15px;">杂谈</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/编辑器/" style="font-size: 10px;">编辑器</a> <a href="/tags/网络请求/" style="font-size: 10px;">网络请求</a> <a href="/tags/美酒/" style="font-size: 12.5px;">美酒</a> <a href="/tags/踩坑/" style="font-size: 12.5px;">踩坑</a>
     			</div>
     	</section>
     
