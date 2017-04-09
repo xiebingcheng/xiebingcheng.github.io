@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-26T16:52:05.234Z</updated>
+  <updated>2017-04-09T13:33:24.735Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows装mac系统(虚拟机方法)</title>
+    <link href="http://yoursite.com/2017/04/08/Windows%E8%A3%85mac%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://yoursite.com/2017/04/08/Windows装mac系统/</id>
+    <published>2017-04-08T13:12:07.000Z</published>
+    <updated>2017-04-09T13:33:24.735Z</updated>
+    
+    <content type="html"><![CDATA[<p>穷鬼没钱买mac,但是现在又需要mac系统,安装特定的软件.只好找个虚拟机安装mac的系统了.</p>
+<p>这里找到两个博文, 重点是跟着博文1做,然后博文2辅助.</p>
+<p><a href="http://blog.csdn.net/hamber_bao/article/details/51335834" target="_blank" rel="external">博文1</a></p>
+<p><a href="http://www.jianshu.com/p/d2da6dd8cdb3" target="_blank" rel="external">博文2</a></p>
+<p>首先跟着博文1来做: 博文1说的vmware workstation和VM12(VMware-player),其实是一个东西,一个是收费版的,另一个是简化版没收费的.</p>
+<p>然后,跟着博文1做的时候,我遇见了大概3个报错,一个是 机器弹窗报错 “二进制错误” , 这个解决方法是: 进bios–将 Inter Virtuailization Technology 设置成enabled .(但是要注意,有些电脑的cpu不支持虚拟化,所以开不了,只能选择放弃安装mac的系统.可以用cpu-z 这个软件来测试一下,是否有此功能,查看方法是cpu选项的Instructions有VT-x,这个项,说明此电脑支持开启虚拟.)</p>
+<p>第二个错是 </p>
+<pre><code>锁定文件失败
+
+打开磁盘&quot;E:\MAC\OS X 10.11.vmdk&quot;或它所依赖的
+某个快照磁盘。
+
+模块&quot;Disk&quot;启动失败。
+
+未能启动虚拟机。
+</code></pre><p>解决方法是:找到VM根目录(就是mac系统的根目录)，搜索.lck文件，全部删除，重启虚拟机即可.</p>
+<p>第三个错误是 和博文一说的一样, 就是 “不可恢复错误:(vcpu-0)” </p>
+<p>解决方法和博文的一样即可. 找到根文件下的 OS X xx.xx.vmx,用记事本打开,在smc.present = “TRUE”后面，手动添加一句smc.version = 0。</p>
+<p>然后安装好的虚拟机里的mac系统后,设置os x 系统按照博文2来就行,然后记住安装博文2最后那里提到的,VMware Tools</p>
+<p>先弹出os x 的光盘,然后在虚拟机软件管理项目选项卡,安装VMware Tools,然后就行了.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;穷鬼没钱买mac,但是现在又需要mac系统,安装特定的软件.只好找个虚拟机安装mac的系统了.&lt;/p&gt;
+&lt;p&gt;这里找到两个博文, 重点是跟着博文1做,然后博文2辅助.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/hamber_bao/artic
+    
+    </summary>
+    
+    
+      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
+    
+      <category term="os x" scheme="http://yoursite.com/tags/os-x/"/>
+    
+      <category term="windows" scheme="http://yoursite.com/tags/windows/"/>
+    
+  </entry>
   
   <entry>
     <title>vue2.0学习之旅</title>
@@ -63,11 +109,11 @@ npm run build //生成上线目录
     </summary>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
       <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
     
       <category term="vue2" scheme="http://yoursite.com/tags/vue2/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
   </entry>
   
@@ -774,9 +820,9 @@ npm install -g react-native-cli #安装 react-native-cli 模块至全局目录�
     </summary>
     
     
-      <category term="杂谈" scheme="http://yoursite.com/tags/%E6%9D%82%E8%B0%88/"/>
-    
       <category term="一些感悟" scheme="http://yoursite.com/tags/%E4%B8%80%E4%BA%9B%E6%84%9F%E6%82%9F/"/>
+    
+      <category term="杂谈" scheme="http://yoursite.com/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
@@ -1019,50 +1065,6 @@ npm install -g react-native-cli #安装 react-native-cli 模块至全局目录�
     
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>移动端浏览器私有及meta</title>
-    <link href="http://yoursite.com/2016/10/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A7%81%E6%9C%89%E5%8F%8Ameta/"/>
-    <id>http://yoursite.com/2016/10/30/移动端浏览器私有及meta/</id>
-    <published>2016-10-30T07:51:06.000Z</published>
-    <updated>2016-12-08T18:10:30.297Z</updated>
-    
-    <content type="html"><![CDATA[<p>项目中的一些浏览器私有meta</p>
-<p>UC浏览器私有</p>
-<p>全屏模式</p>
-<pre><code>&lt;meta name=&quot;full-screen&quot; content=&quot;yes&quot;&gt;
-</code></pre><p>强制竖屏</p>
-<pre><code>&lt;meta name=&quot;screen-orientation&quot; content=&quot;portrait&quot;&gt;
-</code></pre><p>强制横屏</p>
-<pre><code>&lt;meta name=&quot;screen-orientation&quot; content=&quot;landscape&quot;&gt;
-</code></pre><p>应用模式</p>
-<pre><code>&lt;meta name=&quot;browsermode&quot; content=&quot;application&quot;&gt;
-</code></pre><p>其它</p>
-<p>针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓</p>
-<pre><code>&lt;meta name=&quot;HandheldFriendly&quot; content=&quot;true&quot;&gt;
-</code></pre><p>微软的老式浏览器</p>
-<pre><code>&lt;meta name=&quot;MobileOptimized&quot; content=&quot;320&quot;&gt;
-</code></pre><p>windows phone 点击无高光</p>
-<pre><code>&lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot;&gt;
-</code></pre><p>以后继续补充一些.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;项目中的一些浏览器私有meta&lt;/p&gt;
-&lt;p&gt;UC浏览器私有&lt;/p&gt;
-&lt;p&gt;全屏模式&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;meta name=&amp;quot;full-screen&amp;quot; content=&amp;quot;yes&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-    
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
-      <category term="浏览器" scheme="http://yoursite.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     
   </entry>
   
