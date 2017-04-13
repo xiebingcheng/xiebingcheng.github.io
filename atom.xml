@@ -109,11 +109,11 @@ npm run build //生成上线目录
     </summary>
     
     
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
       <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
     
       <category term="vue2" scheme="http://yoursite.com/tags/vue2/"/>
-    
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
   </entry>
   
@@ -436,11 +436,63 @@ git config --global user.email &quot;YOUR EMAIL ADDRESS&quot;
     </summary>
     
     
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+    
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人简历</title>
+    <link href="http://yoursite.com/2017/03/01/xinjianli/"/>
+    <id>http://yoursite.com/2017/03/01/xinjianli/</id>
+    <published>2017-03-01T12:51:18.000Z</published>
+    <updated>2017-03-23T01:08:58.657Z</updated>
+    
+    <content type="html"><![CDATA[<p>基本信息<br>姓    名：谢秉成                         性    别：男<br>户    籍：广东省                          毕业院校：北华航天工业学院<br>手    机：15889380416                 电子邮箱：xiebingcheng321@163.com<br>学    历：大专                            出生年月：1991 . 7 . 7<br>专    业 :计算机应用技术                    Q      Q：751108002<br>到岗情况：一周以内                        求职方向 : web前端开发<br>期望薪资 : 面议<br>专业技能<br>熟练掌握HTML . CSS+DIV页面布局,并且兼容各种主流浏览器ie.chrome.firefox.opera；<br>熟练使用javascript, ajax能够编写基本的js原生代码,使用Ajax的异步请求实现开发；<br>熟练掌握.  jQuery . Zepto.  bootstrap等框架<br>熟悉jquery api,并能够编写基本的动态交互效果.<br>会用Photoshop进行切图,按照设计师的思路,把psd转化为html;<br>熟练使用svn,git等版本控制工具.<br>熟悉nodejs,并且基于nodejs+hexo搭建一个我本人的个人博客.<br>并且基于node+express+jade+bootstrap+mongoose+mongdb,搭建了一个包含连接数据库的整体小型网站玩具.<br>目前正在关注和学习react.js,nodejs和python语言.<br>工作经验<br>  2014.8至2016.1             深圳金益铭有限公司<br>    it专员<br>  2016.3至2016.10           深圳高搜易有限公司<br>    前端开发工程师<br>  2016.10至2017.3            深圳前海金石有限公司<br>    前端开发工程师<br> 项目经验<br>    项目一：公司pc官网的迭代与维护 (响应式网站)<br>开发技术:  HTML5 + CSS3 +  Javascript +jQuery+normalize.css<br>项目描述 :这是一款投资理财的项目,项目中有”我要理财”.”我要借款”.”安全保障”.”高家大院”.”我的账号”等模块. 有需要的人士可以在平台选择投资产品,没有账户的人士,可以在平台上注册账户并且管理自己的账户.<br>项目技术：<br>1、使用css3 @media和优雅降级的原则制作响应式页面；<br>2、利用normalize.css,重置和兼容浏览器样式和页面(不太喜欢使用reset.css,因为它直接把全部元素重置几乎一样,太”暴力”了).<br>3、按照屏幕大小设置断点,利用css3 @media按照屏幕大小选择加载对应样式和图片.<br>4、利用htnl5新标签picture.实现响应式图片(轮播图).因为这个比较新,稍微老一点的浏览器不兼容,这里我使用picturefill.js来兼容浏览器,以致实现响应式图片技术<br>5、运用jquery的Ajax.get请求数据并从后台拿到数据进行渲染.数据交互,post提交表单等重要信息等.<br>6、利用jquery提供的aip实现网站与用户的交互逻辑.<br>7、把小图片制作成css精灵,减少http请求次数.<br>    项目二： 投资理财APP – 掌富宝(已经上线,ios,安卓,商店可下载)<br>开发技术:  HTML5 + CSS3 + Javascript+ zepto +flexible<br>    项目描述： 该项目是一款金融理财APP，共有”首页”.”产品中心”.”理财师专区”.”发现”.”我的”5个模块.”首页”模块可以看到最新金融产品和热点资讯等.”产品中心”可以选择合适的产品进行参考投资.”理财师专区”可以选择喜欢的理财师咨询理财.”我”就是个人中心,可以修改个人资料等.用户可以用这个手机端平台进行金融产品咨询投资理财等.<br>项目技术：<br>1、使用html5和css3进行页面构建.<br>2、使用flexible进行页面重构,使其兼容各种安卓,ios等移动端型号屏幕,自适应屏幕大小；<br>3、使用zepto.js库实现,页面和用户的交互逻辑,并且可防止点击穿透事件发生.<br>4、利用cookies防止用户恶意重复刷新短信验证码.<br>5、利用ajax的get方法获取数据,进行后台数据渲染到页面上.<br>6、利用事件冒泡的机制,使用事件代理的方式给原来并不存在的元素绑定事件.<br>    项目三:微信公众号页面的开发和维护<br>开发技术:  HTML5 + CSS3 + Javascript + zepto +flexible<br>项目描述:此微信公众号为公司所有的,负责介绍金融知识,宣传公司的产品,的一个平台.<br>项目技术:<br>1、使用flexible进行页面重构,使其兼容各种屏幕的大小.<br>2、html5和css3进行页面重构.<br>3、使用zepto.js实现页面和用户交互,ajax的get方法获取数据进行页面的渲染.<br>4、使用图片懒加载,减轻用户流量负担,缓解服务器的压力,尽量减少或者延迟对服务器的http请求.<br>    项目四： 大学校园购物平台(移动端)<br>开发技术:  HTML5 + CSS3 + Javascript + zepto +flexible<br>项目描述：该项目是面向在校大学生做的购物平台买一些零食,饮料,速食等吃的和日常用品,此项目分为主页,详情页,购物车页面,注册页面,登录页面,订单确认页面,支付页面。用户可以使用这个平台实现,注册,登录,选购商品,下单,付款等一系列服务.<br>项目技术：<br>1、    使用zepto. flexible进行移动端的开发；<br>2、    使用tap事件,代替click事件优化事件响应,增加用户体验度<br>3、    使用懒加载图片技术,缓解服务器的压力,减少或者延迟向服务器的http请求数.</p>
+<p>个人项目<br>1.使用node作为后台,搭建了一个包含连接数据库的整体的简易的demo网站.<br>地址:<a href="http://g5pw4z.natappfree.cc" target="_blank" rel="external">http://g5pw4z.natappfree.cc</a> (由于是,我使用本地电脑搭建的网站,并不能直接连接外网,没有公网ip.所以我内网穿透了这个地址,但是会不定时的失效,如果打不开了就说明地址失效了,我会继续更新地址)<br>开发环境和技术: nodejs + Express + MongoDB(数据库) +pug(模板引擎)<br>实现的功能:可以实现admin后台的使用,输入数据连接存储在数据库当中,并可以在首页和播放页中查看最新输入的数据.<br>/admin/list 列表页<br>/admin/movie 后台输入页</p>
+<p>2.使用node+hexo搭建了一个个人博客.<br>网址:(<a href="https://xiebingcheng.github.io" target="_blank" rel="external">https://xiebingcheng.github.io</a>)</p>
+<p>自我评价<br>我是一名热爱编程的开发者,平时我喜欢钻研和学习新的技术,会时不时阅读优秀的大牛的技术博客,自己平时也有写博客的习惯.<br>目前专注于前端开发,同时对python也开始感兴趣.<br>目前希望寻求一份满意的web开发的工作.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;基本信息&lt;br&gt;姓    名：谢秉成                         性    别：男&lt;br&gt;户    籍：广东省                          毕业院校：北华航天工业学院&lt;br&gt;手    机：15889380416           
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>nodejs学习之旅</title>
+    <link href="http://yoursite.com/2017/02/13/nodejs%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/"/>
+    <id>http://yoursite.com/2017/02/13/nodejs学习之旅/</id>
+    <published>2017-02-12T16:25:53.000Z</published>
+    <updated>2017-04-12T16:42:53.419Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.不需要重启就能看到更改node代码的效果(supervisor)</p>
+<p>在使用node开发的时候,会因为频繁更改代码而导致node程序都要每次的手动重启,才能看到效果(因为node是直接获取内存的东西,不像php是直接重新加载.).使用supervisor 可以解决这个问题.</p>
+<pre><code>npm install -g supervisor
+</code></pre><p>运行</p>
+<pre><code>supervisor --harmony app.js
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1.不需要重启就能看到更改node代码的效果(supervisor)&lt;/p&gt;
+&lt;p&gt;在使用node开发的时候,会因为频繁更改代码而导致node程序都要每次的手动重启,才能看到效果(因为node是直接获取内存的东西,不像php是直接重新加载.).使用supervisor 可以
+    
+    </summary>
+    
     
       <category term="node" scheme="http://yoursite.com/tags/node/"/>
     
-      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="踩坑" scheme="http://yoursite.com/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
   </entry>
   
@@ -483,58 +535,6 @@ git config --global user.email &quot;YOUR EMAIL ADDRESS&quot;
       <category term="http" scheme="http://yoursite.com/tags/http/"/>
     
       <category term="网络请求" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用nodejs管理工具nvm遇见的坑</title>
-    <link href="http://yoursite.com/2017/01/18/%E7%94%A8nodejs%E7%9A%84%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7nvm%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91/"/>
-    <id>http://yoursite.com/2017/01/18/用nodejs的管理工具nvm遇见的坑/</id>
-    <published>2017-01-18T14:20:11.000Z</published>
-    <updated>2017-03-06T09:36:57.196Z</updated>
-    
-    <content type="html"><![CDATA[<p>用nvm管理的几个nodejs版本,其中只有第一个下载的node版本的npm能使用,剩下的都不能使用!<br>我很纳闷,因为这样的话,除了能使用的那个node,剩下的根本都不能npm,那这个nodejs版本还有什么用.我越想越觉得不对,肯定是什么地方出错了,才会导致这样的结果..</p>
-<p>踩坑之旅开始了</p>
-<p>事情是这样的,因为项目不同,有时候要用的node版本也不同.然后我百度知道了一个nodejs的管理工具叫nvm,<a href="http://dajyaretakuya.blog.51cto.com/2823475/1760255/" target="_blank" rel="external">贴上一个大神的博客.</a><br>我用的是windows版本的nvm.版本号是1.1.1</p>
-<p>然后一个巨大的坑出现了,我第一次用这个nvm. 刚刚开始安装的很顺利,就是下载nvm有点难下载,速度很慢. 然后安装基本无压力,nvm会自动的帮你把环境变量配置好,当然,也可以自己配置,因为有时候想要它的文件地址掌控在自己的手中.<br>环境变量配置:</p>
-<pre><code>NVM_HOME = C:\nvm  //新建这两个变量
-NVM_SYMLINK = C:\nodejs 
-Path = %NVM_HOME%;%NVM_SYMLINK%  //这个是直接配置在系统的path里面的.
-</code></pre><p>弄好nvm后,通过命令下载nodejs</p>
-<pre><code>nvm install 版本号
-</code></pre><p>然后我下载的第一个node一切正常,npm什么的正常使用.<br>但是当我的下载的第二个第三个node的时候,发现npm根本不能使用.</p>
-<p>发现这个问题后,我百度,google了很久,看了许多博文,发现他们的方法不太适合我这个问题.我也配置了无数遍的环境变量,结果还是不行.基本上方法都用了一遍,这个问题就是不能解决.</p>
-<p>到了后面,我看到一篇博文的<a href="http://blog.csdn.net/stopcpp/article/details/53909558" target="_blank" rel="external">关于npm安装和环境变量的配置</a>给了我点启发,他把npm的包,放到了他新建的nvm文件夹里.<br>我就在想,npm包的事,结果我发现,除了第一个安装的node里面的node_modules是有npm这个文件,剩下的都是空的,我想,这个应该就是问题的所在了吧.<br>然后我试了试,把第一个成功的node版本的node_modules文件夹里的npm文直接复制到另一个版本的node_modules文件夹里面.结果奇迹出现了,切换到这个版本的node后,输入命令 npm -v 发现有输出版本号了. </p>
-<p>到此,问题解决了.</p>
-<p>但是还有更坑的是什么,我还是不甘心,又试了一下nvm,我把一些不能用npm的node直接从文件夹中删除.然后又重新通过命令 nvm install 版本号 下载这个node版本, 发现这个node的npm有了! </p>
-<p>对,你没听错, 有了!</p>
-<p>我只想说,兄弟,不带这么玩的吧..</p>
-<p>对了,还有个情况就是,npm下载东西,因为服务器在国外,速度很慢,甚至下载不成功.所以要通过国内的镜像服务器来下载, 比如 淘宝的 和 cnpm</p>
-<p>这里,还有一个叫nrm的东西,很好用,就是专门处理这个情况的.</p>
-<p>nrm的用法是:</p>
-<pre><code>npm install -g nrm //全局下载安装这个nrm 
-</code></pre><p>列出所有可以用的npm的镜像源地址</p>
-<pre><code>nrm ls //安装后可以使用这个命令
-</code></pre><p>然后,想用哪个镜像源,就用哪个,国内肯定是cnpm和淘宝(淘宝10分钟同步国外的npm库一次,cnpm15分钟同步一次)的啦.</p>
-<pre><code>nrm use cnpm //使用cnpm这个镜像源下网络载nodejs的库.提升网速度
-</code></pre><p>测试每个镜像源的链接速度</p>
-<pre><code>nrm test //测试速度,一般淘宝的最快
-</code></pre><p>好啦,这个工具我感觉挺好用的,特别是下载库的时候速度太慢,可以切换镜像源,用这个nrm最方便.连地址你都可以不用百度了,直接用nrm帮你换地址就成了.</p>
-<p>记得,一定要加 -g 全局安装 nrm 让其他版本的nodejs都能用,所以记得,我觉得不仅仅是nrm要全局安装,其实如果用这个nvm管理多个node的话,其他的node也要用库,全局安装就不用这么麻烦,每个都要下载一遍,直接全局安装就行.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;用nvm管理的几个nodejs版本,其中只有第一个下载的node版本的npm能使用,剩下的都不能使用!&lt;br&gt;我很纳闷,因为这样的话,除了能使用的那个node,剩下的根本都不能npm,那这个nodejs版本还有什么用.我越想越觉得不对,肯定是什么地方出错了,才会导致这样的结
-    
-    </summary>
-    
-    
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
-    
-      <category term="nodejs" scheme="http://yoursite.com/tags/nodejs/"/>
-    
-      <category term="nvm" scheme="http://yoursite.com/tags/nvm/"/>
     
   </entry>
   
@@ -588,7 +588,59 @@ npm install -g react-native-cli #安装 react-native-cli 模块至全局目录�
     
       <category term="js" scheme="http://yoursite.com/tags/js/"/>
     
+      <category term="nodejs" scheme="http://yoursite.com/tags/nodejs/"/>
+    
       <category term="微信" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用nodejs管理工具nvm遇见的坑</title>
+    <link href="http://yoursite.com/2017/01/18/%E7%94%A8nodejs%E7%9A%84%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7nvm%E9%81%87%E8%A7%81%E7%9A%84%E5%9D%91/"/>
+    <id>http://yoursite.com/2017/01/18/用nodejs的管理工具nvm遇见的坑/</id>
+    <published>2017-01-18T14:20:11.000Z</published>
+    <updated>2017-03-06T09:36:57.196Z</updated>
+    
+    <content type="html"><![CDATA[<p>用nvm管理的几个nodejs版本,其中只有第一个下载的node版本的npm能使用,剩下的都不能使用!<br>我很纳闷,因为这样的话,除了能使用的那个node,剩下的根本都不能npm,那这个nodejs版本还有什么用.我越想越觉得不对,肯定是什么地方出错了,才会导致这样的结果..</p>
+<p>踩坑之旅开始了</p>
+<p>事情是这样的,因为项目不同,有时候要用的node版本也不同.然后我百度知道了一个nodejs的管理工具叫nvm,<a href="http://dajyaretakuya.blog.51cto.com/2823475/1760255/" target="_blank" rel="external">贴上一个大神的博客.</a><br>我用的是windows版本的nvm.版本号是1.1.1</p>
+<p>然后一个巨大的坑出现了,我第一次用这个nvm. 刚刚开始安装的很顺利,就是下载nvm有点难下载,速度很慢. 然后安装基本无压力,nvm会自动的帮你把环境变量配置好,当然,也可以自己配置,因为有时候想要它的文件地址掌控在自己的手中.<br>环境变量配置:</p>
+<pre><code>NVM_HOME = C:\nvm  //新建这两个变量
+NVM_SYMLINK = C:\nodejs 
+Path = %NVM_HOME%;%NVM_SYMLINK%  //这个是直接配置在系统的path里面的.
+</code></pre><p>弄好nvm后,通过命令下载nodejs</p>
+<pre><code>nvm install 版本号
+</code></pre><p>然后我下载的第一个node一切正常,npm什么的正常使用.<br>但是当我的下载的第二个第三个node的时候,发现npm根本不能使用.</p>
+<p>发现这个问题后,我百度,google了很久,看了许多博文,发现他们的方法不太适合我这个问题.我也配置了无数遍的环境变量,结果还是不行.基本上方法都用了一遍,这个问题就是不能解决.</p>
+<p>到了后面,我看到一篇博文的<a href="http://blog.csdn.net/stopcpp/article/details/53909558" target="_blank" rel="external">关于npm安装和环境变量的配置</a>给了我点启发,他把npm的包,放到了他新建的nvm文件夹里.<br>我就在想,npm包的事,结果我发现,除了第一个安装的node里面的node_modules是有npm这个文件,剩下的都是空的,我想,这个应该就是问题的所在了吧.<br>然后我试了试,把第一个成功的node版本的node_modules文件夹里的npm文直接复制到另一个版本的node_modules文件夹里面.结果奇迹出现了,切换到这个版本的node后,输入命令 npm -v 发现有输出版本号了. </p>
+<p>到此,问题解决了.</p>
+<p>但是还有更坑的是什么,我还是不甘心,又试了一下nvm,我把一些不能用npm的node直接从文件夹中删除.然后又重新通过命令 nvm install 版本号 下载这个node版本, 发现这个node的npm有了! </p>
+<p>对,你没听错, 有了!</p>
+<p>我只想说,兄弟,不带这么玩的吧..</p>
+<p>对了,还有个情况就是,npm下载东西,因为服务器在国外,速度很慢,甚至下载不成功.所以要通过国内的镜像服务器来下载, 比如 淘宝的 和 cnpm</p>
+<p>这里,还有一个叫nrm的东西,很好用,就是专门处理这个情况的.</p>
+<p>nrm的用法是:</p>
+<pre><code>npm install -g nrm //全局下载安装这个nrm 
+</code></pre><p>列出所有可以用的npm的镜像源地址</p>
+<pre><code>nrm ls //安装后可以使用这个命令
+</code></pre><p>然后,想用哪个镜像源,就用哪个,国内肯定是cnpm和淘宝(淘宝10分钟同步国外的npm库一次,cnpm15分钟同步一次)的啦.</p>
+<pre><code>nrm use cnpm //使用cnpm这个镜像源下网络载nodejs的库.提升网速度
+</code></pre><p>测试每个镜像源的链接速度</p>
+<pre><code>nrm test //测试速度,一般淘宝的最快
+</code></pre><p>好啦,这个工具我感觉挺好用的,特别是下载库的时候速度太慢,可以切换镜像源,用这个nrm最方便.连地址你都可以不用百度了,直接用nrm帮你换地址就成了.</p>
+<p>记得,一定要加 -g 全局安装 nrm 让其他版本的nodejs都能用,所以记得,我觉得不仅仅是nrm要全局安装,其实如果用这个nvm管理多个node的话,其他的node也要用库,全局安装就不用这么麻烦,每个都要下载一遍,直接全局安装就行.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;用nvm管理的几个nodejs版本,其中只有第一个下载的node版本的npm能使用,剩下的都不能使用!&lt;br&gt;我很纳闷,因为这样的话,除了能使用的那个node,剩下的根本都不能npm,那这个nodejs版本还有什么用.我越想越觉得不对,肯定是什么地方出错了,才会导致这样的结
+    
+    </summary>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="nvm" scheme="http://yoursite.com/tags/nvm/"/>
     
       <category term="nodejs" scheme="http://yoursite.com/tags/nodejs/"/>
     
@@ -820,9 +872,9 @@ npm install -g react-native-cli #安装 react-native-cli 模块至全局目录�
     </summary>
     
     
-      <category term="一些感悟" scheme="http://yoursite.com/tags/%E4%B8%80%E4%BA%9B%E6%84%9F%E6%82%9F/"/>
-    
       <category term="杂谈" scheme="http://yoursite.com/tags/%E6%9D%82%E8%B0%88/"/>
+    
+      <category term="一些感悟" scheme="http://yoursite.com/tags/%E4%B8%80%E4%BA%9B%E6%84%9F%E6%82%9F/"/>
     
   </entry>
   
@@ -985,86 +1037,6 @@ npm install -g react-native-cli #安装 react-native-cli 模块至全局目录�
     
     
       <category term="杂谈" scheme="http://yoursite.com/tags/%E6%9D%82%E8%B0%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>人工智能全球发展报告2016</title>
-    <link href="http://yoursite.com/2016/12/05/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%85%A8%E7%90%83%E5%8F%91%E5%B1%95%E6%8A%A5%E5%91%8A2016/"/>
-    <id>http://yoursite.com/2016/12/05/人工智能全球发展报告2016/</id>
-    <published>2016-12-05T15:05:03.000Z</published>
-    <updated>2016-12-19T09:08:01.602Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天,看到在前不久举行的乌镇互联网大会上,发布了全球人工智能的发展报告2016,我觉得,确实有一些用处,现在摘录下来保存在博客中.</p>
-<p>以下是,2016年人工智能的最新发展情况.</p>
-<p>第一,在企业数量.融资规模上,中国和美国之间仍然有很大的差距.目前,美国人工智能企业是中国数量的4倍,投资机构数量是中国的21倍,不过中国的人工智能领域的发展速度非常快,在2012年开始,中国在专利申请以及专利授权的数量上,已经开始超越美国,从人工智能融资规模来看,中国也仅次于美国,全球第二.</p>
-<p>第二,在全球各国人工智能领域分项指标的排名上看,前十基本是欧美发达国家.以及中国,日本,印度. 值得一提的是,经济实力越强的国家,相关分项指标越靠前,比如人工智能的专利数,前4名分别是美国,中国,日本,德国,这恰好是这四个国家的全球经济规模位次.</p>
-<p>第三,国内的,北京,广东,上海,四川正在引领国内人工智能的发展.在东部地区,其中北京,上海,深圳,不仅仅是在排名上靠前,在全球也名列前茅.值得注意的是,杭州在专利和影响力上也领先于广州.</p>
-<p>第四,资本寒冬让投资人工智能更加理性了.报告显示,国内人工智能投资加快,但是交易额没有明显增加.全球人工智能投资,美国欧洲比较密集,数量较多,其次是中国,印度,以色列.其中美国投资项目位列第一,从人工智能的并购来看,大多是美国企业,包括谷歌,微软,苹果,英特尔等.</p>
-<p>第五,关于国内BAT人工智能的不同玩法.<br>BAT等国内科技巨头公司,对人工智能的探索都停留在初级阶段.从目前来看,百度已经是全面布局,成立了许多的实验室.阿里在人工智能上的更多是关注云计算方面.此外,阿里联合富士康投资了日本软银旗下的机器人公司,布局机器人领域.腾讯在布局人工智能的方式是,先是考察了大量美国机器学习平台类的初创公司,同时进行了一些收购.其次成立了多个人工智能的研发部门..</p>
-<p>呜. 要加油了. 我.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天,看到在前不久举行的乌镇互联网大会上,发布了全球人工智能的发展报告2016,我觉得,确实有一些用处,现在摘录下来保存在博客中.&lt;/p&gt;
-&lt;p&gt;以下是,2016年人工智能的最新发展情况.&lt;/p&gt;
-&lt;p&gt;第一,在企业数量.融资规模上,中国和美国之间仍然有很大的差距.目前,美
-    
-    </summary>
-    
-    
-      <category term="人工智能" scheme="http://yoursite.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-      <category term="AI" scheme="http://yoursite.com/tags/AI/"/>
-    
-      <category term="2016" scheme="http://yoursite.com/tags/2016/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python开发者10个节省时间的方法</title>
-    <link href="http://yoursite.com/2016/11/08/python%E5%BC%80%E5%8F%91%E8%80%8510%E4%B8%AA%E8%8A%82%E7%9C%81%E6%97%B6%E9%97%B4%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-    <id>http://yoursite.com/2016/11/08/python开发者10个节省时间的方法/</id>
-    <published>2016-11-07T16:46:16.000Z</published>
-    <updated>2016-12-08T18:08:28.700Z</updated>
-    
-    <content type="html"><![CDATA[<p>想学习python这门语言,我确实被他简洁的语法打动了.相比javascript我感觉比较简单. 好了,不多说,今天看到网上的一篇关于python的高效学习方法,我把他拿下来,为日后使用.</p>
-<p>#Python 开发者节省时间的 10 个方法</p>
-<h2 id="1-不使用分号"><a href="#1-不使用分号" class="headerlink" title="1. 不使用分号"></a>1. 不使用分号</h2><p>使用分号在 Python 中是可选的，对比其他面向对象语言，你不需要在每一条语句后面使用分号。</p>
-<p>这看起来很简单，似乎也节省不了多少时间；但一旦你的代码量扩展到数千号，这些分号就变得分心且没有必要键入。</p>
-<h2 id="2-找一个称手的代码编辑器"><a href="#2-找一个称手的代码编辑器" class="headerlink" title="2. 找一个称手的代码编辑器"></a>2. 找一个称手的代码编辑器</h2><p>选择一个称手的代码编辑器可以节省大量的时间。面对这么多代码编辑器，很多新手都会感觉很迷茫。</p>
-<p>习惯一个编辑器再使用其他编辑器会觉得很混乱，所以选一个称手的是一个好的起点。不管你选择哪一个，要实时支持 flake8 和 PEP8。</p>
-<h2 id="3-遵循-Python-代码规范"><a href="#3-遵循-Python-代码规范" class="headerlink" title="3. 遵循 Python 代码规范"></a>3. 遵循 Python 代码规范</h2><p>遵循 Python 代码规范可以提升代码的可读性，从而节省评审代码的时间。</p>
-<h2 id="4-使用-help-函数"><a href="#4-使用-help-函数" class="headerlink" title="4. 使用 help() 函数"></a>4. 使用 help() 函数</h2><p>Python 的 help() 是随手可用的内置函数可以节约很多时间，比如查找其他函数的解释。你可以在解释器终端直接运行该函数。</p>
-<p>Python 文档有更多该函数的用法。</p>
-<h2 id="5-使用库"><a href="#5-使用库" class="headerlink" title="5. 使用库"></a>5. 使用库</h2><p>Python 有大量的库可以让你不必每次都重复造轮子。</p>
-<p>比如，你可以从 PyPI（Python包索引）选择大量可用的包，这是一个软件仓库。<br>Scikit-image 是一个很好例子，它使图像处理任务如模糊，增强对比度，缩放只需要一些函数调用就可以完成。</p>
-<h2 id="6-使用Cookiecutter"><a href="#6-使用Cookiecutter" class="headerlink" title="6. 使用Cookiecutter"></a>6. 使用Cookiecutter</h2><p>Cookiecutter 是一命令行工具，可以帮助你从工程模板创建 Python 工程，这可以节省大量的时间。</p>
-<h2 id="7-严格的注释"><a href="#7-严格的注释" class="headerlink" title="7. 严格的注释"></a>7. 严格的注释</h2><p>养成写注释的好习惯，可以节省你和其他人的时间，尤其是作调试跟踪。（是的我们听到很多，但似乎很多程序员还是需要提醒）。<br>注释在团队合作是非常关键，尤其是一个做了大量变更。</p>
-<h2 id="8-经常测试"><a href="#8-经常测试" class="headerlink" title="8. 经常测试"></a>8. 经常测试</h2><p>尝试测试你程序中的每一个组件。听起来好像有点费时，但长时间运行可以节省大量时间，帮助你发现隐藏的 bug，让你对代码更放心，还强制你理解自己的每一片代码在真实情况下是如何地运行。</p>
-<p>REPL 是一个 read-eval-print loop，一个常用的代码测试工具，很多 Pythonists 使用它。</p>
-<h2 id="9-专注和专业"><a href="#9-专注和专业" class="headerlink" title="9. 专注和专业"></a>9. 专注和专业</h2><p>Pythonists 都建议要有一个专注领域和专长。你可以使用 Python 做很多事情，从编写网页摄像到处理计算和算法。</p>
-<p>已经有大量的库可以帮助完成这些任务，如 SimpleCV，计算机视觉处理；Biopython，是一个生物计算库； SymPy，是一个数学符号计算库。</p>
-<p>深入类似这些的领域，并掌握一个特定的框架，帮助你在更深的层次学习 Python，掌握一个特定的代码风格（在第三部分已经提到），处理特定类型的问题。</p>
-<h2 id="10-每天编码"><a href="#10-每天编码" class="headerlink" title="10. 每天编码"></a>10. 每天编码</h2><p>当你养成了每天写 python 代码，使用 python 解决问题的习惯，你就会开始用 python 思考，可以这么说，这将最终会帮助你更快的解决问题。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>纸上思考 —— 在直接深入代码之前这样做 —— 将给你进行修改的灵活性。直接就去写代码会强迫你从一开始就得去考虑实现的细节, 这在启动项目时常常不是对你的时间的最佳利用方式。纸上思考这种解放注意力的方式对于头脑风暴和问题的解决都很有好处!</p>
-<p>掌握基础知识</p>
-<p>最后这一条看似很明显，但一定要投入时间来学习 Python 的基础知识. 这样最终会为你节省很多的时间，因为对更加复杂的主题，你会有更好的准备.<br>一些好书可以对此有所帮助，它们包括：</p>
-<p>《学习 Python》<br>《Python 编程入门》: 介绍Python计算机语言和计算机编程.<br>通过阅读博客和文章，保持有关信息的新鲜度也很重要。可以跟进的一个很棒博客是 The Mouse Vs. The Python.</p>
-<p><a href="https://www.sitepoint.com/10-time-saving-tips-pythonists/" target="_blank" rel="external">原文链接:https://www.sitepoint.com/10-time-saving-tips-pythonists/</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;想学习python这门语言,我确实被他简洁的语法打动了.相比javascript我感觉比较简单. 好了,不多说,今天看到网上的一篇关于python的高效学习方法,我把他拿下来,为日后使用.&lt;/p&gt;
-&lt;p&gt;#Python 开发者节省时间的 10 个方法&lt;/p&gt;
-&lt;h2 id=
-    
-    </summary>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
