@@ -143,87 +143,6 @@
       <div class="body-wrap">
         
   
-    <article id="post-用nodejs的管理工具nvm遇见的坑" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/18/用nodejs的管理工具nvm遇见的坑/">用nodejs管理工具nvm遇见的坑</a>
-    </h1>
-  
-
-        <a href="/2017/01/18/用nodejs的管理工具nvm遇见的坑/" class="archive-article-date">
-  	<time datetime="2017-01-18T14:20:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-18</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>用nvm管理的几个nodejs版本,其中只有第一个下载的node版本的npm能使用,剩下的都不能使用!<br>我很纳闷,因为这样的话,除了能使用的那个node,剩下的根本都不能npm,那这个nodejs版本还有什么用.我越想越觉得不对,肯定是什么地方出错了,才会导致这样的结果..</p>
-<p>踩坑之旅开始了</p>
-<p>事情是这样的,因为项目不同,有时候要用的node版本也不同.然后我百度知道了一个nodejs的管理工具叫nvm,<a href="http://dajyaretakuya.blog.51cto.com/2823475/1760255/" target="_blank" rel="external">贴上一个大神的博客.</a><br>我用的是windows版本的nvm.版本号是1.1.1</p>
-<p>然后一个巨大的坑出现了,我第一次用这个nvm. 刚刚开始安装的很顺利,就是下载nvm有点难下载,速度很慢. 然后安装基本无压力,nvm会自动的帮你把环境变量配置好,当然,也可以自己配置,因为有时候想要它的文件地址掌控在自己的手中.<br>环境变量配置:</p>
-<pre><code>NVM_HOME = C:\nvm  //新建这两个变量
-NVM_SYMLINK = C:\nodejs 
-Path = %NVM_HOME%;%NVM_SYMLINK%  //这个是直接配置在系统的path里面的.
-</code></pre><p>弄好nvm后,通过命令下载nodejs</p>
-<pre><code>nvm install 版本号
-</code></pre><p>然后我下载的第一个node一切正常,npm什么的正常使用.<br>但是当我的下载的第二个第三个node的时候,发现npm根本不能使用.</p>
-<p>发现这个问题后,我百度,google了很久,看了许多博文,发现他们的方法不太适合我这个问题.我也配置了无数遍的环境变量,结果还是不行.基本上方法都用了一遍,这个问题就是不能解决.</p>
-<p>到了后面,我看到一篇博文的<a href="http://blog.csdn.net/stopcpp/article/details/53909558" target="_blank" rel="external">关于npm安装和环境变量的配置</a>给了我点启发,他把npm的包,放到了他新建的nvm文件夹里.<br>我就在想,npm包的事,结果我发现,除了第一个安装的node里面的node_modules是有npm这个文件,剩下的都是空的,我想,这个应该就是问题的所在了吧.<br>然后我试了试,把第一个成功的node版本的node_modules文件夹里的npm文直接复制到另一个版本的node_modules文件夹里面.结果奇迹出现了,切换到这个版本的node后,输入命令 npm -v 发现有输出版本号了. </p>
-<p>到此,问题解决了.</p>
-<p>但是还有更坑的是什么,我还是不甘心,又试了一下nvm,我把一些不能用npm的node直接从文件夹中删除.然后又重新通过命令 nvm install 版本号 下载这个node版本, 发现这个node的npm有了! </p>
-<p>对,你没听错, 有了!</p>
-<p>我只想说,兄弟,不带这么玩的吧..</p>
-<p>对了,还有个情况就是,npm下载东西,因为服务器在国外,速度很慢,甚至下载不成功.所以要通过国内的镜像服务器来下载, 比如 淘宝的 和 cnpm</p>
-<p>这里,还有一个叫nrm的东西,很好用,就是专门处理这个情况的.</p>
-<p>nrm的用法是:</p>
-<pre><code>npm install -g nrm //全局下载安装这个nrm 
-</code></pre><p>列出所有可以用的npm的镜像源地址</p>
-<pre><code>nrm ls //安装后可以使用这个命令
-</code></pre><p>然后,想用哪个镜像源,就用哪个,国内肯定是cnpm和淘宝(淘宝10分钟同步国外的npm库一次,cnpm15分钟同步一次)的啦.</p>
-<pre><code>nrm use cnpm //使用cnpm这个镜像源下网络载nodejs的库.提升网速度
-</code></pre><p>测试每个镜像源的链接速度</p>
-<pre><code>nrm test //测试速度,一般淘宝的最快
-</code></pre><p>好啦,这个工具我感觉挺好用的,特别是下载库的时候速度太慢,可以切换镜像源,用这个nrm最方便.连地址你都可以不用百度了,直接用nrm帮你换地址就成了.</p>
-<p>记得,一定要加 -g 全局安装 nrm 让其他版本的nodejs都能用,所以记得,我觉得不仅仅是nrm要全局安装,其实如果用这个nvm管理多个node的话,其他的node也要用库,全局安装就不用这么麻烦,每个都要下载一遍,直接全局安装就行.</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nvm/">nvm</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/18/用nodejs的管理工具nvm遇见的坑/#more">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-python的库win32的引入失败问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -824,6 +743,81 @@ Path = %NVM_HOME%;%NVM_SYMLINK%  //这个是直接配置在系统的path里面�
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/12/14/解决反复纠结3方法/#more">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-关于睡眠" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/08/关于睡眠/">关于睡眠</a>
+    </h1>
+  
+
+        <a href="/2016/12/08/关于睡眠/" class="archive-article-date">
+  	<time datetime="2016-12-07T17:30:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-08</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天,我在回家的时候,看到一篇关于睡眠的文章, 写的是睡眠时间也是由基因控制的, 看的我,仿佛刷新了我的知识库,因为我一直认为睡眠是因为累了,就像是电池充电那样,电池没电了,需要充电,电池放电多,充电时间多,电池放电少,充电时间短..</p>
+<p>这篇文章大概意思如下, 日本研究团队从小白鼠的实验发现某段基因改变,使得小白鼠的睡眠时间长短也发生改变.</p>
+<p>研究人员先用化学试剂诱导差不多1万只小鼠，使它们发生基因突变，接着，又从这上万只小鼠中，找出睡眠时间明显比较长的那部分，培育它们的后代，看看这些爱睡觉的小鼠，是不是后代也一样爱睡觉。如果是，那就说明，这一谱系的小鼠爱睡觉，是由基因决定的。</p>
+<p>然后研究人员通过技术手段定位了”嗜睡基因”,并起名为sik3.</p>
+<p>接着,科学家们用化学手段，把变异的、爱睡觉的小鼠身体里的Sik3基因给敲除掉，结果发现小鼠的睡觉时间变短了。这就证实了，Sik3是让动物获得睡眠的基因。</p>
+<p>而且,研究人员也发现,这段基因sik3,不只小白鼠有,人也有,甚至果蝇和线虫一样有,而且都是对睡眠时间起作用的,所以,可以这么说,睡眠基因可能是生命底层设计中的一个重要环节，并不是等生物发展到高等动物阶段后才出现的。</p>
+<p>而且文章还说,睡眠在生物圈是一种非常普遍的行为，但是细想你就能体会到睡眠的重要性：睡眠往往占据生命总时长的三分之一，而且睡眠状态时，生物几乎完全没有防御能力，这么脆弱，这么容易受攻击的状态，竟然在进化中得以保留，那一定包含了一种生死攸关的功能。以至于获得这种功能的收益，远大于每天有三分之一时间，不设防的风险。</p>
+<p>是啊,其他生物我不懂,但是人只要有一整天不睡觉,到最后肯定非常累的慌,<br>但是如果在自然状态下,人类要面对野兽的时候,也没用说不睡觉的,但是睡觉又带来了极大的风险,稍微不注意,就是死亡的代价.</p>
+<p>所以,既然睡眠没有在大自然的选择下淘汰,必定有它特别重要的作用,所以,码农们,别熬夜了,我也要赶紧睡觉..</p>
+<p>我去睡觉啦,拜拜,除了给我介绍对象的事,其他的事不要打扰我..</p>
+<p>世界,晚安..</p>
+<pre><code>            .-&quot;&apos;&apos;-.  _
+          .&apos;       `( \
+        @/            &apos;)   ,--,__,-&quot;
+        /        /      \ /     /   _/
+      __|           ,   |/         /
+    .~  `\   / \ ,  |   /
+  .~      `\    `  /  _/   _/
+.~          `\  ~~`__/    /
+~             `--&apos;/
+             /   /    /    
+            /  /&apos;    /
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/08/关于睡眠/#more">展开全文 >></a>
         </p>
       
 

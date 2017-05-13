@@ -474,28 +474,6 @@ git config --global user.email &quot;YOUR EMAIL ADDRESS&quot;
   </entry>
   
   <entry>
-    <title>个人简历</title>
-    <link href="http://yoursite.com/2017/03/01/xinjianli/"/>
-    <id>http://yoursite.com/2017/03/01/xinjianli/</id>
-    <published>2017-03-01T12:51:18.000Z</published>
-    <updated>2017-03-23T01:08:58.657Z</updated>
-    
-    <content type="html"><![CDATA[<p>基本信息<br>姓    名：谢秉成                         性    别：男<br>户    籍：广东省                          毕业院校：北华航天工业学院<br>手    机：15889380416                 电子邮箱：xiebingcheng321@163.com<br>学    历：大专                            出生年月：1991 . 7 . 7<br>专    业 :计算机应用技术                    Q      Q：751108002<br>到岗情况：一周以内                        求职方向 : web前端开发<br>期望薪资 : 面议<br>专业技能<br>熟练掌握HTML . CSS+DIV页面布局,并且兼容各种主流浏览器ie.chrome.firefox.opera；<br>熟练使用javascript, ajax能够编写基本的js原生代码,使用Ajax的异步请求实现开发；<br>熟练掌握.  jQuery . Zepto.  bootstrap等框架<br>熟悉jquery api,并能够编写基本的动态交互效果.<br>会用Photoshop进行切图,按照设计师的思路,把psd转化为html;<br>熟练使用svn,git等版本控制工具.<br>熟悉nodejs,并且基于nodejs+hexo搭建一个我本人的个人博客.<br>并且基于node+express+jade+bootstrap+mongoose+mongdb,搭建了一个包含连接数据库的整体小型网站玩具.<br>目前正在关注和学习react.js,nodejs和python语言.<br>工作经验<br>  2014.8至2016.1             深圳金益铭有限公司<br>    it专员<br>  2016.3至2016.10           深圳高搜易有限公司<br>    前端开发工程师<br>  2016.10至2017.3            深圳前海金石有限公司<br>    前端开发工程师<br> 项目经验<br>    项目一：公司pc官网的迭代与维护 (响应式网站)<br>开发技术:  HTML5 + CSS3 +  Javascript +jQuery+normalize.css<br>项目描述 :这是一款投资理财的项目,项目中有”我要理财”.”我要借款”.”安全保障”.”高家大院”.”我的账号”等模块. 有需要的人士可以在平台选择投资产品,没有账户的人士,可以在平台上注册账户并且管理自己的账户.<br>项目技术：<br>1、使用css3 @media和优雅降级的原则制作响应式页面；<br>2、利用normalize.css,重置和兼容浏览器样式和页面(不太喜欢使用reset.css,因为它直接把全部元素重置几乎一样,太”暴力”了).<br>3、按照屏幕大小设置断点,利用css3 @media按照屏幕大小选择加载对应样式和图片.<br>4、利用htnl5新标签picture.实现响应式图片(轮播图).因为这个比较新,稍微老一点的浏览器不兼容,这里我使用picturefill.js来兼容浏览器,以致实现响应式图片技术<br>5、运用jquery的Ajax.get请求数据并从后台拿到数据进行渲染.数据交互,post提交表单等重要信息等.<br>6、利用jquery提供的aip实现网站与用户的交互逻辑.<br>7、把小图片制作成css精灵,减少http请求次数.<br>    项目二： 投资理财APP – 掌富宝(已经上线,ios,安卓,商店可下载)<br>开发技术:  HTML5 + CSS3 + Javascript+ zepto +flexible<br>    项目描述： 该项目是一款金融理财APP，共有”首页”.”产品中心”.”理财师专区”.”发现”.”我的”5个模块.”首页”模块可以看到最新金融产品和热点资讯等.”产品中心”可以选择合适的产品进行参考投资.”理财师专区”可以选择喜欢的理财师咨询理财.”我”就是个人中心,可以修改个人资料等.用户可以用这个手机端平台进行金融产品咨询投资理财等.<br>项目技术：<br>1、使用html5和css3进行页面构建.<br>2、使用flexible进行页面重构,使其兼容各种安卓,ios等移动端型号屏幕,自适应屏幕大小；<br>3、使用zepto.js库实现,页面和用户的交互逻辑,并且可防止点击穿透事件发生.<br>4、利用cookies防止用户恶意重复刷新短信验证码.<br>5、利用ajax的get方法获取数据,进行后台数据渲染到页面上.<br>6、利用事件冒泡的机制,使用事件代理的方式给原来并不存在的元素绑定事件.<br>    项目三:微信公众号页面的开发和维护<br>开发技术:  HTML5 + CSS3 + Javascript + zepto +flexible<br>项目描述:此微信公众号为公司所有的,负责介绍金融知识,宣传公司的产品,的一个平台.<br>项目技术:<br>1、使用flexible进行页面重构,使其兼容各种屏幕的大小.<br>2、html5和css3进行页面重构.<br>3、使用zepto.js实现页面和用户交互,ajax的get方法获取数据进行页面的渲染.<br>4、使用图片懒加载,减轻用户流量负担,缓解服务器的压力,尽量减少或者延迟对服务器的http请求.<br>    项目四： 大学校园购物平台(移动端)<br>开发技术:  HTML5 + CSS3 + Javascript + zepto +flexible<br>项目描述：该项目是面向在校大学生做的购物平台买一些零食,饮料,速食等吃的和日常用品,此项目分为主页,详情页,购物车页面,注册页面,登录页面,订单确认页面,支付页面。用户可以使用这个平台实现,注册,登录,选购商品,下单,付款等一系列服务.<br>项目技术：<br>1、    使用zepto. flexible进行移动端的开发；<br>2、    使用tap事件,代替click事件优化事件响应,增加用户体验度<br>3、    使用懒加载图片技术,缓解服务器的压力,减少或者延迟向服务器的http请求数.</p>
-<p>个人项目<br>1.使用node作为后台,搭建了一个包含连接数据库的整体的简易的demo网站.<br>地址:<a href="http://g5pw4z.natappfree.cc" target="_blank" rel="external">http://g5pw4z.natappfree.cc</a> (由于是,我使用本地电脑搭建的网站,并不能直接连接外网,没有公网ip.所以我内网穿透了这个地址,但是会不定时的失效,如果打不开了就说明地址失效了,我会继续更新地址)<br>开发环境和技术: nodejs + Express + MongoDB(数据库) +pug(模板引擎)<br>实现的功能:可以实现admin后台的使用,输入数据连接存储在数据库当中,并可以在首页和播放页中查看最新输入的数据.<br>/admin/list 列表页<br>/admin/movie 后台输入页</p>
-<p>2.使用node+hexo搭建了一个个人博客.<br>网址:(<a href="https://xiebingcheng.github.io" target="_blank" rel="external">https://xiebingcheng.github.io</a>)</p>
-<p>自我评价<br>我是一名热爱编程的开发者,平时我喜欢钻研和学习新的技术,会时不时阅读优秀的大牛的技术博客,自己平时也有写博客的习惯.<br>目前专注于前端开发,同时对python也开始感兴趣.<br>目前希望寻求一份满意的web开发的工作.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;基本信息&lt;br&gt;姓    名：谢秉成                         性    别：男&lt;br&gt;户    籍：广东省                          毕业院校：北华航天工业学院&lt;br&gt;手    机：15889380416           
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>nodejs学习之旅</title>
     <link href="http://yoursite.com/2017/02/13/nodejs%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/"/>
     <id>http://yoursite.com/2017/02/13/nodejs学习之旅/</id>
@@ -519,11 +497,11 @@ git config --global user.email &quot;YOUR EMAIL ADDRESS&quot;
     </summary>
     
     
-      <category term="node" scheme="http://yoursite.com/tags/node/"/>
-    
       <category term="踩坑" scheme="http://yoursite.com/tags/%E8%B8%A9%E5%9D%91/"/>
     
       <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
     
   </entry>
   
@@ -1025,6 +1003,49 @@ Path = %NVM_HOME%;%NVM_SYMLINK%  //这个是直接配置在系统的path里面�
       <category term="新知" scheme="http://yoursite.com/tags/%E6%96%B0%E7%9F%A5/"/>
     
       <category term="方法" scheme="http://yoursite.com/tags/%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于睡眠</title>
+    <link href="http://yoursite.com/2016/12/08/%E5%85%B3%E4%BA%8E%E7%9D%A1%E7%9C%A0/"/>
+    <id>http://yoursite.com/2016/12/08/关于睡眠/</id>
+    <published>2016-12-07T17:30:21.000Z</published>
+    <updated>2016-12-12T13:59:51.631Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天,我在回家的时候,看到一篇关于睡眠的文章, 写的是睡眠时间也是由基因控制的, 看的我,仿佛刷新了我的知识库,因为我一直认为睡眠是因为累了,就像是电池充电那样,电池没电了,需要充电,电池放电多,充电时间多,电池放电少,充电时间短..</p>
+<p>这篇文章大概意思如下, 日本研究团队从小白鼠的实验发现某段基因改变,使得小白鼠的睡眠时间长短也发生改变.</p>
+<p>研究人员先用化学试剂诱导差不多1万只小鼠，使它们发生基因突变，接着，又从这上万只小鼠中，找出睡眠时间明显比较长的那部分，培育它们的后代，看看这些爱睡觉的小鼠，是不是后代也一样爱睡觉。如果是，那就说明，这一谱系的小鼠爱睡觉，是由基因决定的。</p>
+<p>然后研究人员通过技术手段定位了”嗜睡基因”,并起名为sik3.</p>
+<p>接着,科学家们用化学手段，把变异的、爱睡觉的小鼠身体里的Sik3基因给敲除掉，结果发现小鼠的睡觉时间变短了。这就证实了，Sik3是让动物获得睡眠的基因。</p>
+<p>而且,研究人员也发现,这段基因sik3,不只小白鼠有,人也有,甚至果蝇和线虫一样有,而且都是对睡眠时间起作用的,所以,可以这么说,睡眠基因可能是生命底层设计中的一个重要环节，并不是等生物发展到高等动物阶段后才出现的。</p>
+<p>而且文章还说,睡眠在生物圈是一种非常普遍的行为，但是细想你就能体会到睡眠的重要性：睡眠往往占据生命总时长的三分之一，而且睡眠状态时，生物几乎完全没有防御能力，这么脆弱，这么容易受攻击的状态，竟然在进化中得以保留，那一定包含了一种生死攸关的功能。以至于获得这种功能的收益，远大于每天有三分之一时间，不设防的风险。</p>
+<p>是啊,其他生物我不懂,但是人只要有一整天不睡觉,到最后肯定非常累的慌,<br>但是如果在自然状态下,人类要面对野兽的时候,也没用说不睡觉的,但是睡觉又带来了极大的风险,稍微不注意,就是死亡的代价.</p>
+<p>所以,既然睡眠没有在大自然的选择下淘汰,必定有它特别重要的作用,所以,码农们,别熬夜了,我也要赶紧睡觉..</p>
+<p>我去睡觉啦,拜拜,除了给我介绍对象的事,其他的事不要打扰我..</p>
+<p>世界,晚安..</p>
+<pre><code>            .-&quot;&apos;&apos;-.  _
+          .&apos;       `( \
+        @/            &apos;)   ,--,__,-&quot;
+        /        /      \ /     /   _/
+      __|           ,   |/         /
+    .~  `\   / \ ,  |   /
+  .~      `\    `  /  _/   _/
+.~          `\  ~~`__/    /
+~             `--&apos;/
+             /   /    /    
+            /  /&apos;    /
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天,我在回家的时候,看到一篇关于睡眠的文章, 写的是睡眠时间也是由基因控制的, 看的我,仿佛刷新了我的知识库,因为我一直认为睡眠是因为累了,就像是电池充电那样,电池没电了,需要充电,电池放电多,充电时间多,电池放电少,充电时间短..&lt;/p&gt;
+&lt;p&gt;这篇文章大概意思如下, 
+    
+    </summary>
+    
+    
+      <category term="杂谈" scheme="http://yoursite.com/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
